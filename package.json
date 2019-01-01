@@ -1,0 +1,12 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Personal website of Paul Smith, a friendly designer from Manchester.",
+  "main": "gulp.js",
+  "repository": "https://github.com/paulmsmith/website.git",
+  "author": "Paul Smith <mail@paulsmith.site>",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@11ty/eleventy": "^0.6.0"
+  }
+}
