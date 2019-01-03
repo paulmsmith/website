@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Personal website of Paul Smith, a friendly designer from Manchester.",
   "repository": "https://github.com/paulmsmith/website.git",
+  "scripts": {
+    "start": "gulp build & gulp watch & ELEVENTY_ENV=dev eleventy --serve"
+  },
   "author": {
     "name": "Paul Smith",
     "email": "mail@paulsmith.site",
@@ -11,6 +14,10 @@
   },
   "license": "MPL-2.0",
   "dependencies": {
-    "@11ty/eleventy": "^0.6.0"
+    "@11ty/eleventy": "^0.6.0",
+    "gulp-hub": "^0.8.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
   }
 }
