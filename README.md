@@ -2,9 +2,9 @@
 
 Long term website and place to publish
 
-#Set-up
+# Set-up
 
-##You will need:
+## You will need:
 
 1. NodeJS
 2. Yarn/NPM
@@ -15,7 +15,7 @@ Long term website and place to publish
 
 I like to use a linter and a formatter. The linter will allow us to detect bugs early, and the formatter will help us maintain consistency throughout our codebase. With both these extensions working side-by-side, we should be able to build clean and maintainable code.
 
-##Install the things
+## Install the things
 
 1. Download the ESLint and Prettier extensions for VSCode.
 
