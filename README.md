@@ -7,7 +7,7 @@ Feel free to take the code to make your own website.
 ### You will need:
 
 1. [NodeJS](https://nodejs.org)
-2. Yarn/[NPM](https://github.com/npm/npm)
+2. [Yarn](https://yarnpkg.com)/[NPM](https://github.com/npm/npm)
 3. [NPX](https://github.com/zkat/npx)
 4. [VSCode](https://code.visualstudio.com/)
 5. [Prettier Extension for VSCode](https://github.com/prettier/prettier-vscode)
