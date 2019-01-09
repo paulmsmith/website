@@ -10,11 +10,12 @@ const config = {
       assetsURL: ''
     },
     production: {
-      name: 'production',
+      name: 'prod',
       assetsURL: ''
     }
   },
   paths: {
+    distDir,
     fonts: {
       src: [`${sourceDir}/fonts`],
       dest: `${distDir}/fonts/`
@@ -25,7 +26,8 @@ const config = {
     },
     scripts: {
       src: [`${sourceDir}/scripts`],
-      dest: `${distDir}/scripts/`
+      dest: `${distDir}/scripts/`,
+      outputFile: `scripts.js`
     },
     styles: {
       src: [`${assetsDir}/css`],

@@ -17,7 +17,10 @@ function generateScripts(settings) {
 
 gulp.task('compile:scripts', () => {
   generateScripts({
-    src: [`${config.paths.scripts.src}/**.js`, `!${config.paths.scripts.src}/_*.js`],
+    src: [
+      config.paths.scripts.src.map(element => `${element}**/*.js`),
+      config.paths.scripts.src.map(element => `!${element}**/_*.js`)
+    ],
     outputFile: config.paths.scripts.outputFile,
     dest: config.paths.scripts.dest
   });
