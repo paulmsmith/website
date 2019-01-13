@@ -5,4 +5,4 @@ function handleFonts() {
   return gulp.src(`${config.paths.fonts.src}**/*.*`).pipe(gulp.dest(config.paths.fonts.dest));
 }
 
-gulp.task('handle:fonts', handleFonts);
+gulp.task('optimise:fonts', handleFonts);

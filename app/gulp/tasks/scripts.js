@@ -7,6 +7,8 @@ const utilFunctions = require('../gulp_utils');
 const config = require('../gulp_config');
 
 function generateScripts(settings) {
+  console.log(settings);
+
   return gulp
     .src(settings.src)
     .pipe(plumber({ errorHandler: utilFunctions.onError }))
@@ -15,13 +17,11 @@ function generateScripts(settings) {
     .pipe(gulp.dest(settings.dest));
 }
 
-gulp.task('compile:scripts', () => {
+gulp.task('compile:scripts', done => {
   generateScripts({
-    src: [
-      config.paths.scripts.src.map(element => `${element}**/*.js`),
-      config.paths.scripts.src.map(element => `!${element}**/_*.js`)
-    ],
+    src: config.paths.scripts.src.map(element => `${element}/**/[!_]*.js`),
     outputFile: config.paths.scripts.outputFile,
     dest: config.paths.scripts.dest
   });
+  done();
 });

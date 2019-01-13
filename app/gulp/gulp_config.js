@@ -17,21 +17,21 @@ const config = {
   paths: {
     distDir,
     fonts: {
-      src: [`${sourceDir}/fonts`],
+      src: [`${assetsDir}/fonts`],
       dest: `${distDir}/fonts/`
     },
     images: {
-      src: [`${sourceDir}/images`],
+      src: [`${assetsDir}/images`],
       dest: `${distDir}/images/`
     },
     scripts: {
-      src: [`${sourceDir}/scripts`],
+      src: [`${assetsDir}/scripts`],
       dest: `${distDir}/scripts/`,
       outputFile: `scripts.js`
     },
     styles: {
-      src: [`${assetsDir}/css`],
-      dest: `${distDir}/css/`
+      src: [`${assetsDir}/styles`],
+      dest: `${distDir}/styles/`
     },
     templates: {
       src: [`${sourceDir}/templates`, `${sourceDir}/components`],

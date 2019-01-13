@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
-const config = require('./gulp_config');
+const config = require('../gulp_config');
 
 const { reload } = browserSync;
 
@@ -11,7 +11,7 @@ function watch(callback) {
       tasks: ['build:templates']
     },
     {
-      glob: [`${config.paths.stylesheets.src}**/*.scss`],
+      glob: [`${config.paths.styles.src}**/*.scss`],
       tasks: ['compile:stylesheets']
     },
     {
@@ -19,8 +19,8 @@ function watch(callback) {
       tasks: ['optimise:images']
     },
     {
-      glob: `${config.paths.src.js}**/*`,
-      tasks: ['scripts']
+      glob: `${config.paths.scripts.src}**/*`,
+      tasks: ['compile:scripts']
     }
   ];
 
@@ -28,14 +28,14 @@ function watch(callback) {
     if (callback) {
       watcher.tasks.push(callback);
     }
-    gulp.watch(watcher.glob, watcher.tasks);
+    gulp.watch(watcher.glob, gulp.series(watcher.tasks));
   });
 }
 
 function serve() {
   browserSync({
     notify: false,
-    server: [config.paths.dest],
+    server: [config.paths.distDir],
     tunnel: false,
     open: false
   });
