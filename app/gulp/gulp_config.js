@@ -16,6 +16,7 @@ const config = {
   },
   paths: {
     distDir,
+    eleventyConfig: `./app/eleventy/eleventy.config.js`,
     fonts: {
       src: [`${assetsDir}/fonts`],
       dest: `${distDir}/fonts/`
