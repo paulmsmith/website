@@ -1,0 +1,47 @@
+{% macro tester(args) %}
+  <p>tester</p>
+{% endmacro %}
+
+{% macro blah(args) %}
+  <p>blah</p>
+{% endmacro %}
+
+
+{# #######################################################
+R E N D E R - C O M P O N E N T - MACRO
+##########################################################
+This macro is a one-stop-shop to render the components
+It enforces a structure when using the components and
+passing them data.
+
+  For example:
+  {{
+    macro.renderComponent({
+      name: 'hero',
+      fields: {
+        content: 'text here'
+      }
+    })
+  }}
+
+Macros documentation:
+https://mozilla.github.io/nunjucks/templating.html#macro
+####################################################### #}
+{% macro renderComponent(component) %}
+    {# 'with' is a nunjucks extension, detailed here: https://github.com/welldigital/nunjucks-with #}
+    {% with component.fields | deeperMerge({ componentName: component.name, componentPath: component.path, componentType: component.type, caller: (caller if caller else false), metadata: component.metadata }) %}
+        {% if componentName %}
+            {# if we dont have a componentPath property on the context object then render a component based on the required 'name' property which needs to match the file name of nunjucks component file  #}
+            {% if not componentPath %}
+                {% set path = ("components/" + componentName + "/" + componentName + ".njk") %}
+            {# if we do have a componentPath property then use that to directly include the component #}
+            {% else %}
+                {% set path = componentPath %}
+            {% endif %}
+            {# finally include the component with the correct path and the context will be available as set with the 'with' block surrounding #}
+            {% include path %}
+        {% else %}
+            {{ 'macro.renderComponent() - you must provide the name of the component in the object used to call this macro' | log }}
+        {% endif %}
+    {% endwith %}
+{% endmacro %}
