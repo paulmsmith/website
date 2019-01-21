@@ -1,9 +1,11 @@
+const config = require('../app.config');
+
 module.exports = eleventyConfig => {
   return {
     dir: {
-      input: './src/site',
-      output: './build',
-      includes: '_templates'
+      input: `${config.paths.sourceDir}/site`,
+      output: `${config.paths.distDir}`,
+      includes: `_templates`
     },
     templateFormats: ['njk', 'md'],
     htmlTemplateEngine: 'njk',

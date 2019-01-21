@@ -17,6 +17,14 @@ I like to use a linter and a formatter. The linter will allow us to detect bugs 
 
 ### Install the things
 
+#### Get your local environment set-up (assumes Mac)
+
+1. Install Homebrew
+1. Install yarn. See [official Yarn installation instructions](https://yarnpkg.com/en/docs/install).
+1. Install Node and NPM with `brew install node`
+
+#### Get the editor running correctly
+
 1. Download the ESLint and Prettier extensions for VSCode.
 
 2. Install the ESLint and Prettier libraries into our project. In your project’s root directory, you will want to run:

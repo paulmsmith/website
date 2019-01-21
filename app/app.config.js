@@ -14,9 +14,21 @@ const config = {
       assetsURL: ''
     }
   },
+  prefixBrowsers: [
+    'ie >= 8',
+    'ie_mob >= 10',
+    'ff >= 20',
+    'chrome >= 4',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+  ],
   paths: {
+    sourceDir,
     distDir,
-    eleventyConfig: `./app/eleventy/eleventy.config.js`,
+    eleventyConfigPath: `./app/eleventy/eleventy.config.js`,
     fonts: {
       src: [`${assetsDir}/fonts`],
       dest: `${distDir}/fonts/`
@@ -30,12 +42,12 @@ const config = {
       dest: `${distDir}/scripts/`,
       outputFile: `scripts.js`
     },
-    styles: {
+    stylesheets: {
       src: [`${assetsDir}/styles`],
       dest: `${distDir}/styles/`
     },
     templates: {
-      src: [`${sourceDir}/templates`, `${sourceDir}/components`],
+      src: [`${sourceDir}/site`],
       dest: `${distDir}/`
     }
   }
