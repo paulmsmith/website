@@ -1,4 +1,5 @@
-{% import "macros/tools.njk" as tools %}
+{% import "includes/macros.njk" as macros %}
+{% import "includes/render_component.njk" as component %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +10,14 @@
   <title>Test</title>
 </head>
 <body>
-  {{ content | safe }}
   {{
-    tools.renderComponent({
-      name: 'header'
+    component.render({
+      name: 'header',
+      fields: {
+        text: "I am text that was neatly passed into the header component"
+      }
     })
   }}
-
-  {{ 'bslkslkskls' | log }}
+  {{ content | safe }}
 </body>
 </html>

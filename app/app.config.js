@@ -1,5 +1,6 @@
 const sourceDir = `./src`;
 const assetsDir = `${sourceDir}/assets`;
+const templatesDir = `${sourceDir}/www`;
 const distDir = `./build`;
 const env = process.env.NODE_ENV;
 
@@ -43,11 +44,11 @@ const config = {
       outputFile: `scripts.js`
     },
     stylesheets: {
-      src: [`${assetsDir}/styles`],
+      src: [`${assetsDir}/styles`, `${templatesDir}/_templates/components`],
       dest: `${distDir}/styles/`
     },
     templates: {
-      src: [`${sourceDir}/site`],
+      src: [templatesDir],
       dest: `${distDir}/`
     }
   }

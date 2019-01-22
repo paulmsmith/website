@@ -5,7 +5,7 @@ const config = require('../app.config');
 
 // instantiate the nunjucks environment
 const nunjucksEnvironment = new Nunjucks.Environment(
-  new Nunjucks.FileSystemLoader(['./src/site/_templates'])
+  new Nunjucks.FileSystemLoader([`${config.paths.templates.src}/_templates`])
 );
 
 /**

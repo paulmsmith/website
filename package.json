@@ -4,7 +4,7 @@
   "description": "Personal website of Paul Smith, a friendly designer from Manchester.",
   "repository": "https://github.com/paulmsmith/website.git",
   "scripts": {
-    "start": "NODE_ENV=dev DEBUG=Eleventy* gulp default"
+    "start": "NODE_ENV=dev gulp default"
   },
   "author": {
     "name": "Paul Smith",

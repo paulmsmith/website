@@ -96,7 +96,10 @@ function generateStylesheets() {
       sass({
         importer: globImporter(),
         outputStyle: 'expanded',
-        includePaths: [config.paths.src]
+        includePaths: [
+          config.paths.sourceDir,
+          `${config.paths.sourceDir}/www/_templates/`
+        ]
       })
     )
     .pipe(autoprefixer(config.prefixBrowsers))
@@ -145,7 +148,7 @@ function watch() {
       tasks: ['build:templates']
     },
     {
-      glob: [`${config.paths.stylesheets.src}/**/*.scss`],
+      glob: config.paths.stylesheets.src.map(element => `${element}/**/*.scss`),
       tasks: ['compile:stylesheets']
     },
     {

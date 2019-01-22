@@ -1,12 +1,3 @@
-{% macro tester(args) %}
-  <p>tester</p>
-{% endmacro %}
-
-{% macro blah(args) %}
-  <p>blah</p>
-{% endmacro %}
-
-
 {# #######################################################
 R E N D E R - C O M P O N E N T - MACRO
 ##########################################################
@@ -27,7 +18,7 @@ passing them data.
 Macros documentation:
 https://mozilla.github.io/nunjucks/templating.html#macro
 ####################################################### #}
-{% macro renderComponent(component) %}
+{% macro render(component) %}
     {# 'with' is a nunjucks extension, detailed here: https://github.com/welldigital/nunjucks-with #}
     {% with component.fields | deeperMerge({ componentName: component.name, componentPath: component.path, componentType: component.type, caller: (caller if caller else false), metadata: component.metadata }) %}
         {% if componentName %}

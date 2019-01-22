@@ -7,7 +7,7 @@ module.exports = eleventyConfig => {
   return {
     dir: {
       // where are the files eleventy is to process
-      input: `${config.paths.sourceDir}/site`,
+      input: `${config.paths.sourceDir}/www`,
 
       // where should eleventy put the rendered pages
       output: `${config.paths.distDir}`,
