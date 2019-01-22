@@ -23,14 +23,6 @@ I like to use a linter and a formatter. The linter will allow us to detect bugs 
 4. Fork then clone this repository
 5. Install the dependancies with `yarn install`
 
-### Running the local server
-
-You can get a local server running by typing: `npm start`
-
-### Creating a production build
-
-Get a compiled and optimise build by typing: `npm build`
-
 ### Get the editor running correctly
 
 1. Download the ESLint and Prettier extensions for VSCode.
@@ -59,3 +51,13 @@ Get a compiled and optimise build by typing: `npm build`
 6. Create `.prettierrc` file in your project’s root directory. This will be where you configure your formatting settings. I have added a few of my own preferences below, but I urge you to read more about the [Prettier config file](https://github.com/prettier/prettier#configuration-file)
 
 7. The last step is to make sure Prettier formats on save. Insert `"editor.formatOnSave"`: true into your User Settings in VSCode.
+
+## Using this static site generator
+
+### Running the local server
+
+You can get a local server running by typing: `npm start`
+
+### Creating a production build
+
+Get a compiled and optimise build by typing: `npm build`
