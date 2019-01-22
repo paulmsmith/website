@@ -15,9 +15,7 @@ Feel free to take the code to make your own website.
 
 I like to use a linter and a formatter. The linter will allow us to detect bugs early, and the formatter will help us maintain consistency throughout our codebase. With both these extensions working side-by-side, we should be able to build clean and maintainable code.
 
-### Install the things
-
-#### Get your local environment set-up (assumes Mac)
+### Get your local environment set-up (assumes Mac)
 
 1. Install Homebrew
 2. Install Node and NPM with `brew install node`
@@ -25,15 +23,15 @@ I like to use a linter and a formatter. The linter will allow us to detect bugs 
 4. Fork then clone this repository
 5. Install the dependancies with `yarn install`
 
-#### Running the local server
+### Running the local server
 
 You can get a local server running by typing: `npm start`
 
-#### Creating a production build
+### Creating a production build
 
 Get a compiled and optimise build by typing: `npm build`
 
-#### Get the editor running correctly
+### Get the editor running correctly
 
 1. Download the ESLint and Prettier extensions for VSCode.
 
