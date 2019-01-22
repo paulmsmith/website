@@ -20,8 +20,18 @@ I like to use a linter and a formatter. The linter will allow us to detect bugs 
 #### Get your local environment set-up (assumes Mac)
 
 1. Install Homebrew
-1. Install yarn. See [official Yarn installation instructions](https://yarnpkg.com/en/docs/install).
-1. Install Node and NPM with `brew install node`
+2. Install Node and NPM with `brew install node`
+3. Install yarn. See [official Yarn installation instructions](https://yarnpkg.com/en/docs/install).
+4. Fork then clone this repository
+5. Install the dependancies with `yarn install`
+
+#### Running the local server
+
+You can get a local server running by typing: `npm start`
+
+#### Creating a production build
+
+Get a compiled and optimise build by typing: `npm build`
 
 #### Get the editor running correctly
 
