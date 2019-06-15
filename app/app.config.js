@@ -39,7 +39,7 @@ const config = {
       dest: `${distDir}/images/`
     },
     scripts: {
-      src: [`${assetsDir}/scripts`],
+      src: [`${assetsDir}/scripts`, `${templatesDir}/_templates/components`],
       dest: `${distDir}/scripts/`,
       outputFile: `scripts.js`
     },
