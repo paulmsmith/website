@@ -19,7 +19,7 @@ Macros documentation:
 https://mozilla.github.io/nunjucks/templating.html#macro
 ####################################################### #}
 {% macro render(component) %}
-    {# 'with' is a nunjucks extension, detailed here: https://github.com/welldigital/nunjucks-with #}
+    {# 'with' is a nunjucks extension, detailed here: https://github.com/allmarkedup/nunjucks-with/  #}
     {% with component.fields | deeperMerge({ componentName: component.name, componentPath: component.path, componentType: component.type, caller: (caller if caller else false), metadata: component.metadata }) %}
         {% if componentName %}
             {# if we dont have a componentPath property on the context object then render a component based on the required 'name' property which needs to match the file name of nunjucks component file  #}
