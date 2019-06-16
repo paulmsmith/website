@@ -5,12 +5,16 @@ This macro is a one-stop-shop to render the components
 It enforces a structure when using the components and
 passing them data.
 
-  For example:
+For example:
+
+  {% import "includes/render_component.njk" as component %}
+
   {{
-    macro.renderComponent({
-      name: 'hero',
+    component.render({
+      name: 'header',
       fields: {
-        content: 'text here'
+        title: "Heading text",
+        text: "Paragraph text"
       }
     })
   }}
