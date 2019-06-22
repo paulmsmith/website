@@ -1,24 +1,53 @@
-{% import "includes/macros.njk" as macros %}
-{% import "includes/render_component.njk" as component %}
+{%- import "includes/macros.njk" as macros -%}
+{%- import "includes/render_component.njk" as component -%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | d('en-GB') }}" dir="{{ page.dir | d('ltr') }}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/styles/site.css">
-  <title>Test</title>
+  <title>{% block title %}{{ title | d('title not set') }}{% endblock %}</title>
+  {% block metatags %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% endblock %}
+  {% block stylsheets %}
+    <link rel="stylesheet" href="/styles/site.css">
+  {% endblock %}
 </head>
 <body>
-  {{
-    component.render({
-      name: 'header',
-      fields: {
-        title: "Paul Smith",
-        text: "I'm currently live redesigning my site."
-      }
-    })
-  }}
-  {{ content | safe }}
+  {% block after_opening_body %}{% endblock %}
+
+  <div class="l-doc">
+
+    <header class="l-doc-header">
+      {% block doc_header %}
+        {{
+          component.render({
+            name: 'header',
+            fields: {
+              title: "Paul Smith",
+              text: "I'm currently live redesigning my site."
+            }
+          })
+        }}
+      {% endblock %}
+    </header>
+    <!-- /.l-doc-header -->
+
+    <main class="l-doc-content">
+      {% block doc_content %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
+    <!-- /.l-doc-content -->
+
+    <footer class="l-doc-footer">
+      {% block doc_footer %}{% endblock %}
+    </footer>
+    <!-- /.l-doc-footer -->
+
+  </div>
+  <!-- /.l-doc -->
+
+  {% block before_closing_body %}{% endblock %}
 </body>
 </html>
