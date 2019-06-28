@@ -158,6 +158,11 @@ module.exports = function nunjucksFilters(nunj, sys) {
     );
   };
 
+  // takes a date and makes it human readable in a given format
+  filters.formatDate = function formatDate(date) {
+
+  };
+
   // export some lodash methods directly.
   // See: https://lodash.com/docs
   filters.merge = _.merge;

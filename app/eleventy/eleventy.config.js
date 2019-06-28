@@ -1,9 +1,16 @@
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const htmlMinTransform = require('./transforms/html-min-transform.js');
 const nunjucksEnv = require('./nunjucks.environment');
 const config = require('../app.config');
 
 module.exports = eleventyConfig => {
-  /** make eleventy use my customer nunjucks 'environment' */
+  // add transforms
+  eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+  // add plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
+  // make eleventy use my custom nunjucks 'environment'
   eleventyConfig.setLibrary('njk', nunjucksEnv);
+
   return {
     dir: {
       // where are the files eleventy is to process
