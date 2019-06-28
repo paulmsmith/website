@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const dateFormat = require('date-fns/format');
 
 module.exports = function nunjucksFilters(nunj, sys) {
   // if you need accss to the internal nunjucks filter you can just env
@@ -159,9 +160,7 @@ module.exports = function nunjucksFilters(nunj, sys) {
   };
 
   // takes a date and makes it human readable in a given format
-  filters.formatDate = function formatDate(date) {
-
-  };
+  filters.formatDate = dateFormat;
 
   // export some lodash methods directly.
   // See: https://lodash.com/docs
