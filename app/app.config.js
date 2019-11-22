@@ -74,6 +74,10 @@ const assetsURL = (function assetsURL() {
   return '';
 })();
 
+/**
+ * IIFE that sets value to be the environment the
+ * app is running in
+ */
 const currentEnv = (function currentEnv() {
   if (config.isNotLocal) {
     if (config.isDev) {

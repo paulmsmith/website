@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const dateFormat = require('date-fns/format');
 
-module.exports = function nunjucksFilters(nunj, sys) {
+module.exports = function nunjucksFilters(nunj) {
   // if you need accss to the internal nunjucks filter you can just env
   // see the example below for 'safe' which is used in 'filters.log'
   const nunjucksSafe = nunj.getFilter('safe');
@@ -80,68 +80,11 @@ module.exports = function nunjucksFilters(nunj, sys) {
   };
 
   /**
-   * @param {String} path the path to assets
-   */
-  filters.asset = function asset(path) {
-    if (sys.isDev) {
-      return `${sys.pkg.config.assets.urls.dev}${path}`;
-    }
-    if (sys.isProd) {
-      return `${sys.pkg.config.assets.urls.production}${path}`;
-    }
-    return `${path}`;
-  };
-
-  /**
-   * prefixes the url of the ass
-   * @param {String} string the string to prefix with the environment url
-   */
-  filters.prefixURL = function prefixURL(string, slash) {
-    const addSlash = slash ? '/' : '';
-    if (sys.isNotLocal) {
-      return `${sys.assetsURL}${addSlash}${string}`;
-    }
-    return string;
-  };
-
-  /**
    * takes an item and returns it as a string
    * @param {*} item the item to be converted to a string
    */
   filters.makeString = function makeString(item) {
     return String(item);
-  };
-
-  /**
-   * removes the file extension from a link if it is on dev handles
-   * if it is a string or an object
-   * @param {*} link the link object or string
-   * @param {String} extension string for the extension to remove (defaults to .html)
-   */
-
-  filters.generateLink = (link, extension) => {
-    // default extension to remove if not passed in
-    const ext = extension || '.html';
-    const linkTypeString = typeof link === 'string';
-    // remove extension function
-    const removeExtension = function removeExtension(s) {
-      if (s.endsWith(ext)) {
-        return s.substring(0, s.length - ext.length);
-      }
-      return s;
-    };
-
-    // making this a big readable if statement
-    if (sys.isNotLocal) {
-      if (linkTypeString) {
-        return removeExtension(link);
-      }
-      return removeExtension(link.url);
-    }
-    if (linkTypeString) {
-      return link;
-    }
-    return link.url;
   };
 
   /**
