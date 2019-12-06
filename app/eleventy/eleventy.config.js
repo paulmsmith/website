@@ -11,6 +11,10 @@ module.exports = eleventyConfig => {
   // make eleventy use my custom nunjucks 'environment'
   eleventyConfig.setLibrary('njk', nunjucksEnv);
 
+  // set the layout aliases I use most often
+  eleventyConfig.addLayoutAlias('master', 'layouts/master.njk');
+  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
+
   return {
     dir: {
       // where are the files eleventy is to process
