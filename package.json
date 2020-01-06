@@ -42,7 +42,8 @@
     "lodash": "^4.17.15",
     "node-sass-glob-importer": "^5.3.0",
     "nunjucks": "^3.1.7",
-    "require-dir": "^1.2.0"
+    "require-dir": "^1.2.0",
+    "rfs": "^9.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

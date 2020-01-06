@@ -97,6 +97,7 @@ function generateStylesheets() {
         importer: globImporter(),
         outputStyle: 'expanded',
         includePaths: [
+          `./node_modules/rfs/`,
           config.paths.sourceDir,
           `${config.paths.sourceDir}/www/_templates/`
         ]

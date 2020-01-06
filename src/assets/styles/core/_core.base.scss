@@ -1,0 +1,34 @@
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, p {
+  @include rfs(1.3em, line-height);
+}
+
+h1 {
+  @include font-size(40px);
+}
+
+h2 {
+  @include font-size(30px);
+}
+
+h3 {
+  @include font-size(26px);
+}
+
+h4 {
+  @include font-size(23px);
+}
+
+p {
+  @include font-size(25px);
+}
+
+.l-doc {
+  @include rfs(960px, width);
+  @include padding(30px);
+  margin: 0 auto;
+}

@@ -1,0 +1,16 @@
+@import 'core.settings';
+
+//low level helpers and functions
+@import 'helpers/**/**/!(*.ignore).scss';
+@import 'tools/all';
+
+// lowest level default settings
+
+// using 'glob importer' see gulpfile.babel.js
+@import 'functions/**/**/!(*.ignore).scss';
+@import 'mixins/**/**/!(*.ignore).scss';
+@import 'utilities/**/**/!(*.ignore).scss';
+
+// core/foundational css
+@import 'core.base';
+@import 'core.layout';

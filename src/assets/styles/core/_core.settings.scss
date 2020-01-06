@@ -1,0 +1,21 @@
+$theme : (
+  'base': (
+    'red': (
+      'default': '#f00'
+    )
+  )
+) !default;
+
+// Breakpoint at where values start decreasing if screen width is smaller
+$rfs-breakpoint: 1200px;
+
+// Factor of decrease
+$rfs-factor: 10;
+
+// Mode. Possibilities: "min-media-query", "max-media-query"
+// $rfs-mode: max-media-query;
+
+// Mode. Possibilities: "min-media-query", "max-media-query"
+// $rfs-mode: min-media-query !default;
+
+$blah: get('base.red.default');
