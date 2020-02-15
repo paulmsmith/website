@@ -15,7 +15,6 @@ const nunjucksEnvironment = new Nunjucks.Environment(
  */
 const customFilters = NunjucksFilters(nunjucksEnvironment, {
   isDev: config.isDev,
-  isNotLocal: config.isNotLocal,
   isProd: config.isProd,
   assetsURL: config.assetsURL
 });

@@ -57,7 +57,6 @@ const config = {
 // establish the environemnt and add hooks
 const isProd = env === config.envs.production.name;
 const isDev = env === config.envs.development.name;
-const isNotLocal = isDev || isProd;
 
 /**
  * IIFE returns the correct URL for assets dependant on
@@ -79,10 +78,10 @@ const assetsURL = (function assetsURL() {
  * app is running in
  */
 const currentEnv = (function currentEnv() {
-  if (config.isDev) {
+  if (isDev) {
     return config.envs.development.name;
   }
-  if (config.isProd) {
+  if (isProd) {
     return config.envs.production.name;
   }
   return 'local';
@@ -95,7 +94,6 @@ const currentEnv = (function currentEnv() {
 module.exports = Object.assign(config, {
   isProd,
   isDev,
-  isNotLocal,
   assetsURL,
   currentEnv
 });
