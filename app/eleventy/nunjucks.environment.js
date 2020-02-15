@@ -26,7 +26,7 @@ Object.keys(customFilters).forEach(filterName => {
 });
 
 /** useful to know in the templates if we are running on local server */
-nunjucksEnvironment.addGlobal('isNotLocal', config.isNotLocal);
+nunjucksEnvironment.addGlobal('currentEnv', config.currentEnv);
 
 /**
  * the magic source to allow me to set bespoke context for include files

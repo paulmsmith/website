@@ -11,7 +11,7 @@ const config = {
       assetsURL: ''
     },
     production: {
-      name: 'prod',
+      name: 'production',
       assetsURL: ''
     }
   },

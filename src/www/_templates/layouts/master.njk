@@ -49,5 +49,12 @@
   <!-- /.l-doc -->
 
   {% block before_closing_body %}{% endblock %}
+
+  {% if currentEnv == 'production' %}
+    <script async defer src="https://mi.paulsmith.site/app.js"></script>
+    <noscript><img src="https://mi.paulsmith.site/image.gif" alt=""></noscript>
+  {% endif %}
+
+
 </body>
 </html>

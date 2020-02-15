@@ -5,7 +5,7 @@
   "repository": "https://github.com/paulmsmith/website.git",
   "scripts": {
     "start": "NODE_ENV=dev gulp default",
-    "build": "NODE_ENV=prod gulp build"
+    "build": "NODE_ENV=production gulp build"
   },
   "author": {
     "name": "Paul Smith",
