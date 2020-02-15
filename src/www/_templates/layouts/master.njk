@@ -50,6 +50,8 @@
 
   {% block before_closing_body %}{% endblock %}
 
+  {{ currentEnv | log }}
+
   {% if currentEnv == 'production' %}
     <script async defer src="https://mi.paulsmith.site/app.js"></script>
     <noscript><img src="https://mi.paulsmith.site/image.gif" alt=""></noscript>

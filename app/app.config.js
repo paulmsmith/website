@@ -79,13 +79,11 @@ const assetsURL = (function assetsURL() {
  * app is running in
  */
 const currentEnv = (function currentEnv() {
-  if (config.isNotLocal) {
-    if (config.isDev) {
-      return config.envs.development.name;
-    }
-    if (config.isProd) {
-      return config.envs.production.name;
-    }
+  if (config.isDev) {
+    return config.envs.development.name;
+  }
+  if (config.isProd) {
+    return config.envs.production.name;
   }
   return 'local';
 })();
