@@ -6,6 +6,13 @@ $theme : (
   )
 ) !default;
 
+$mq-breakpoints: (
+    small:  320px,
+    medium:  740px,
+    large: 980px,
+    wide:    1300px
+);
+
 // Breakpoint at where values start decreasing if screen width is smaller
 $rfs-breakpoint: 1200px;
 

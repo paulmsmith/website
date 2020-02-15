@@ -1,8 +1,6 @@
 <header class="c-header">
-  {% if title %}
-    <h1>{{ title }}</h1>
-  {% endif %}
-  {% if text %}
-    <p>{{ text }}</p>
+  {% if title %}<h1 class="c-header__title"><a href="/" class="c-header__link">{{ title }}</a></h1>{% endif %}
+  {% if subtitle %}
+    <p class="c-header__subtitle">{{ subtitle }}</p>
   {% endif %}
 </header>
