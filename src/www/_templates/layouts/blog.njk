@@ -1,0 +1,21 @@
+{% extends "layouts/master.njk" %}
+{% block doc_content %}
+  <div class="l-blog-content">
+    <div>
+      <div class="l-blog-content__primary">
+        {% block primary_content %}{% endblock %}
+      </div>
+      <div class="l-blog-content__secondary">
+        <h3>Blogroll</h3>
+        <ul class="list list--links">
+          <li><a href="http://benholliday.com/">Ben Holliday</a></li>
+          <li><a href="https://blog.louisedowne.com/">Lou Downe</a></li>
+          <li><a href="http://tomsteinberg.co.uk/">Tom Steinberg</a></li>
+          <li><a href="http://loft27design.com/writing.html">Stephen McCarthy</a></li>
+          <li><a href="https://www.ermlikeyeah.com/all-posts">Simon Wilson</a></li>
+        </ul>
+        {% block secondary_content %}secondary content{% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

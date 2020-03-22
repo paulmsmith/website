@@ -13,6 +13,7 @@ module.exports = eleventyConfig => {
 
   // set the layout aliases I use most often
   eleventyConfig.addLayoutAlias('master', 'layouts/master.njk');
+  eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
   return {

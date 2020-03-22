@@ -1,14 +1,16 @@
 .c-header {
-  padding: 0 0 1em 0;
-  border-bottom: 3px solid #ccc;
+  padding: 0.5em;
+  background: #333;
+  color: rgb(0, 208, 255);
   &__link {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
   }
   &__title {
-    letter-spacing: -0.055em;
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
+    letter-spacing: -.05em;
+    @include font-size(2rem);
   }
   &__subtitle {
     margin: 0;

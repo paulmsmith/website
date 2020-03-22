@@ -1,0 +1,8 @@
+.u-strike {
+  text-decoration: line-through;
+  &--hover-reveal {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -2,6 +2,7 @@ const sourceDir = `./src`;
 const assetsDir = `${sourceDir}/assets`;
 const templatesDir = `${sourceDir}/www`;
 const distDir = `./build`;
+const assetsDistDir = `${distDir}/assets`;
 const env = process.env.NODE_ENV;
 
 const config = {
@@ -32,20 +33,20 @@ const config = {
     eleventyConfigPath: `./app/eleventy/eleventy.config.js`,
     fonts: {
       src: [`${assetsDir}/fonts`],
-      dest: `${distDir}/fonts/`
+      dest: `${assetsDistDir}`
     },
     images: {
       src: [`${assetsDir}/images`],
-      dest: `${distDir}/images/`
+      dest: `${assetsDistDir}/images/`
     },
     scripts: {
       src: [`${assetsDir}/scripts`, `${templatesDir}/_templates/components`],
-      dest: `${distDir}/scripts/`,
+      dest: `${assetsDistDir}/scripts/`,
       outputFile: `scripts.js`
     },
     stylesheets: {
       src: [`${assetsDir}/styles`, `${templatesDir}/_templates/components`],
-      dest: `${distDir}/styles/`
+      dest: `${assetsDistDir}/styles/`
     },
     templates: {
       src: [templatesDir],

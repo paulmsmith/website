@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+* + * {
+  margin-top: 1.375rem;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}

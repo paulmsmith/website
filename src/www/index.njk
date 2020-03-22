@@ -1,19 +1,35 @@
 ---
-layout: master
-title: Paul Michael Smith
+title: My page title
 ---
+{% extends "layouts/blog.njk" %}
 
-<p>Hello!</p>
-<p>You have reached the home of Paul Smith, a designer based in rainy Manchester, England.</p>
-<p>I'm currently building this website, in the meantime you could checkout my:</p>
+{% block primary_content %}
 
-<ul>
-  <li><a href="https://twitter.com/paulmsmith">ramblings on Twitter</a>,</li>
-  <li><a href="https://www.linkedin.com/in/paulmichaelsmith">work history on LinkedIn</a>,</li>
-  <li><a href="https://www.instagram.com/insta.paulsmith/">photos on Instagram</a></li>
-</ul>
+  <div class="o-media c-about-pane">
+    <h2>About</h2>
+    <p>Paul is lead designer at the <a href="https://www.heritagefund.org.uk">National Lottery Heritage Fund</a> and is based in Manchester, England.</p>
+    <p>This website is currently a work-in-progress but in the meantime you can read my <a href="https://twitter.com/paulmsmith">ramblings on Twitter</a>, <a href="https://www.linkedin.com/in/paulmichaelsmith">work history on LinkedIn</a> or <a href="https://www.instagram.com/insta.paulsmith/">photos on Instagram</a>.</p>
+  </div>
 
-<blockquote>
-  <p>Work hard and be nice to people</p>
-  <cite>- Paul</cite>
-</blockquote>
+  <h2>Website build checklist</h2>
+
+  <ul class="list list--bullet">
+    <li><span class="u-strike u-strike--hover-reveal">Create <a href="https://github.com/paulmsmith/">github repository</a></span></li>
+    <li><span class="u-strike u-strike--hover-reveal">Attach repository to <a href="https://netlify.com">Netlify</a> account</span></li>
+    <li><span class="u-strike u-strike--hover-reveal">Configure Gulp task runner</span></li>
+    <li><span class="u-strike u-strike--hover-reveal">Install Sass</span></li>
+    <li><span class="u-strike u-strike--hover-reveal">Install Eleventy</span></li>
+    <li><span class="u-strike u-strike--hover-reveal">Configure basic Nunjucks templates and layouts</span></li>
+    <li><span class="u-strike u-strike--hover-reveal">Purchase webfonts</span></li>
+    <li><span class="u-strike u-strike--hover-reveal">Configure DNS</span></li>
+    <li>Configure Eleventy</li>
+    <li>Build out pages</li>
+    <li>Style and visual design</li>
+  </ul>
+
+  <p>Remember the days of Notepad and FTP?</p>
+
+{% endblock %}
+
+{% block secondary_content %}{% endblock %}
+
