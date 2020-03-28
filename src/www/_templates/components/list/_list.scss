@@ -5,6 +5,8 @@
 }
 
 .list--links {
+  list-style-type: none;
+  padding: 0;
   > li {
     margin: 0 0 .25em 0;
   }

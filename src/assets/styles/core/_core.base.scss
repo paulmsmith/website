@@ -2,14 +2,15 @@ html {
   min-height: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
-  background: rgb(249, 249, 249);
+  // background: rgb(249, 249, 249);
+  background: rgb(255, 250, 220);
 }
 
 p {
   // make the clickable area a little bigger
   a {
-    padding-left: .09em;
-    padding-right: .09em;
+    padding-left: 0.09em;
+    padding-right: 0.09em;
     text-decoration-skip: ink;
   }
 }
@@ -20,12 +21,13 @@ blockquote {
   }
 }
 
-a, a:link {
+a,
+a:link {
   // box-shadow: inset 0 0px 0 transparent, inset 0 -.06em 0 black;
   text-decoration-color: inherit;
   &:focus {
     color: #333;
-    background-color: #FFDD2A;
+    background-color: #ffdd2a;
     border-bottom: 4px solid #444;
     outline: 0;
     text-decoration: none;

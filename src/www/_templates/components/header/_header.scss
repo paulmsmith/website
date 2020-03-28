@@ -1,16 +1,22 @@
 .c-header {
   padding: 0.5em;
-  background: #333;
-  color: rgb(0, 208, 255);
+  // background: #6C3FFC;
+  // background: #320082;
+  // background: #FFE027;
+  border-bottom: 0.075rem solid black;
   &__link {
+    z-index: 2;
     color: inherit;
     text-decoration: none;
   }
   &__title {
+    // color: white;
     line-height: 1;
     margin: 0;
-    letter-spacing: -.05em;
-    @include font-size(2rem);
+    @include rfs(-0.035em, letter-spacing);
+    @include font-size(1.15rem);
+    @include font-size(3.15rem);
+    // text-transform: uppercase;
   }
   &__subtitle {
     margin: 0;

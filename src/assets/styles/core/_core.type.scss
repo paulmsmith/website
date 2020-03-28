@@ -1,35 +1,46 @@
 @font-face {
   font-family: 'webfont-a-bold';
-  src:  url('/assets/fonts/Ringside-SemiBold.woff2') format('woff2'),
-        url('/assets/fonts/Ringside-SemiBold.woff') format('woff');
+  src: url('/assets/fonts/SuisseIntl-Medium.woff2') format('woff2'),
+    url('/assets/fonts/SuisseIntl-Medium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'webfont-b';
-  src:  url('/assets/fonts/Sentinel-book.woff2') format('woff2'),
-        url('/assets/fonts/Sentinel-book.woff') format('woff');
+  src: url('/assets/fonts/Sentinel-book.woff2') format('woff2'),
+    url('/assets/fonts/Sentinel-book.woff') format('woff');
 }
 
 html {
-  font-smooth: auto;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: 'kern';
+  -webkit-font-feature-settings: 'kern';
 }
 
 body {
   @include font-size(28px);
-  font-family: 'webfont-b', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  color: #444;
+  font-family: 'webfont-b', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  color: rgb(14, 14, 14);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'webfont-a-bold', 'Times', cursive;
-  @include rfs(-.075rem, letter-spacing);
+  font-kerning: normal;
+  font-variant-ligatures: normal;
   @include rfs(2.75rem, margin-top);
   @include rfs(1.375rem, margin-bottom);
+  font-weight: normal;
+  color: #000;
 }
 
-h1, h2 {
+h1,
+h2 {
   line-height: 1.125;
 }
 
@@ -42,7 +53,7 @@ h2 {
 }
 
 h3 {
-  @include font-size(30px);
+  @include font-size(28px);
 }
 
 h4 {
