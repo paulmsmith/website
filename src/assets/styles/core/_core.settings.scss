@@ -1,16 +1,30 @@
-$theme : (
-  'base': (
-    'red': (
-      'default': '#f00'
+$theme-global : (
+  'colour': (
+    'black': (
+      'default': #000
+    )
+  ),
+  'spacing': (
+    'default': 1.375rem * 2,
+    'tiny': 1.375rem/2.75,
+    'small': 1.375rem/2,
+    'large': 1.375rem * 3,
+    'huge': 1.375rem * 4
+  ),
+  'font': (
+    'stack':(
+      'base': '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
+      'display': 'webfont-display',
+      'body': 'webfont-body'
     )
   )
 ) !default;
 
 $mq-breakpoints: (
     small:  320px,
-    medium:  740px,
-    large: 980px,
-    wide:    1300px
+    medium: 740px,
+    large:  980px,
+    wide:   1300px
 );
 
 // Breakpoint at where values start decreasing if screen width is smaller
@@ -24,5 +38,3 @@ $rfs-factor: 15;
 
 // Mode. Possibilities: "min-media-query", "max-media-query"
 // $rfs-mode: min-media-query !default;
-
-$blah: get('base.red.default');

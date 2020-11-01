@@ -1,0 +1,12 @@
+.u-spacer {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  @include rfs(2.75rem, margin-top);
+  @include rfs(1.375rem, margin-bottom);
+}
+
+.u-spacer--divide {
+  height: 1px;
+  background: #ccc;
+}

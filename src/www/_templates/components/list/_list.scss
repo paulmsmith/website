@@ -11,3 +11,13 @@
     margin: 0 0 .25em 0;
   }
 }
+
+.list--links-blog {
+  > li {
+    padding: .3em 0;
+  }
+  > li > a {
+    padding: .15em 0;
+    display: block;
+  }
+}

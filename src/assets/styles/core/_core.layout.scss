@@ -1,37 +1,8 @@
 .l-doc {
   margin: 0;
-}
-
-.l-blog-content {
-  @include mq($from: medium) {
-    @include rfs(960px, width);
+  &-footer,
+  &-navigation,
+  &-content {
+    margin: 0;
   }
-  @include mq($from: large) {
-    @include rfs(1180px, width);
-  }
-  @include padding(0 30px);
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.l-blog-content > * {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc((1.375rem * 1.75) / 2 * -1);
-}
-
-.l-blog-content > * > * {
-  flex-grow: 1;
-  @include rfs(0 calc((1.375rem * 1.75) / 2), margin);
-  @include rfs(350px, flex-basis);
-  @include mq($from: large) {
-    @include rfs(400px, flex-basis);
-  }
-}
-
-.l-blog-content > * > :first-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: calc(55% - (1.375rem * 1.75));
 }

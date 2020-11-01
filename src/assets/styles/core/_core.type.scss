@@ -1,13 +1,30 @@
 @font-face {
-  font-family: 'webfont-a-bold';
+  font-family: 'font-a';
   src: url('/assets/fonts/SuisseIntl-Medium.woff2') format('woff2'),
     url('/assets/fonts/SuisseIntl-Medium.woff') format('woff');
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: 'webfont-b';
-  src: url('/assets/fonts/Sentinel-book.woff2') format('woff2'),
-    url('/assets/fonts/Sentinel-book.woff') format('woff');
+  font-family: 'font-b';
+  src: url('/assets/fonts/font-b-book.woff2') format('woff2'),
+    url('/assets/fonts/font-b-book.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'font-b';
+  src: url('/assets/fonts/font-b-bold.woff2') format('woff2'),
+    url('/assets/fonts/font-b-bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'font-b';
+  src: url('/assets/fonts/font-b-bolditalic.woff2') format('woff2'),
+    url('/assets/fonts/font-b-italic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
 }
 
 html {
@@ -20,46 +37,60 @@ html {
 
 body {
   @include font-size(28px);
-  font-family: 'webfont-b', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol;
-  color: rgb(14, 14, 14);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  color: rgb(40, 40, 40);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'webfont-a-bold', 'Times', cursive;
-  font-kerning: normal;
+%heading {
+  font-family: 'font-a', 'Times', cursive;
   font-variant-ligatures: normal;
+  font-weight: normal;
   @include rfs(2.75rem, margin-top);
   @include rfs(1.375rem, margin-bottom);
-  font-weight: normal;
   color: #000;
 }
 
-h1,
-h2 {
-  line-height: 1.125;
+%bodycopy {
+  font-family: 'font-b', 'Times', cursive;
 }
 
-h1 {
-  @include font-size(54px);
+.o-heading {
+  @extend %heading;
 }
 
-h2 {
-  @include font-size(38px);
-}
+.prose {
 
-h3 {
-  @include font-size(28px);
-}
+  h1,
+  h2,
+  h3,
+  h4 {
+    @extend %heading;
+  }
 
-h4 {
-  @include font-size(23px);
-}
+  h1,
+  h2 {
+    line-height: 1.125;
+  }
 
-p {
-  line-height: 1.375;
+  h1 {
+    @include font-size(54px);
+  }
+
+  h2 {
+    @include font-size(38px);
+  }
+
+  h3 {
+    @include font-size(28px);
+  }
+
+  h4 {
+    @include font-size(23px);
+  }
+
+  p, li {
+    @extend %bodycopy;
+    line-height: 1.375;
+  }
+
 }

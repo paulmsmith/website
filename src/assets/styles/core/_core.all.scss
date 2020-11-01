@@ -9,6 +9,7 @@
 // using 'glob importer' see gulpfile.babel.js
 @import 'functions/**/**/!(*.ignore).scss';
 @import 'mixins/**/**/!(*.ignore).scss';
+@import 'objects/**/**/!(*.ignore).scss';
 @import 'utilities/**/**/!(*.ignore).scss';
 
 // core/foundational css

@@ -37,7 +37,7 @@ const config = {
     },
     images: {
       src: [`${assetsDir}/images`],
-      dest: `${assetsDistDir}/images/`
+      dest: `${assetsDistDir}`
     },
     scripts: {
       src: [`${assetsDir}/scripts`, `${templatesDir}/_templates/components`],

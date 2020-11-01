@@ -40,7 +40,16 @@
     <!-- /.l-doc-content -->
 
     <footer class="l-doc-footer">
-      {% block doc_footer %}{% endblock %}
+      {% block doc_footer %}
+        {{
+          component.render({
+            name: 'footer',
+            fields: {
+              title: "Paul Smith"
+            }
+          })
+        }}
+      {% endblock %}
     </footer>
     <!-- /.l-doc-footer -->
 

@@ -5,35 +5,24 @@ title: Paul Smith - Designer
 
 {% block primary_content %}
 
-  <div class="o-media c-about-pane">
-    <h2>About</h2>
-    <p>Paul is lead designer at the<a href="https://www.heritagefund.org.uk">National Lottery Heritage Fund</a>and is based in Manchester, England.</p>
-    <p>This website is currently a work-in-progress but in the meantime you can read my <a href="https://twitter.com/paulmsmith">ramblings on Twitter</a>, <a href="https://www.linkedin.com/in/paulmichaelsmith">work history on LinkedIn</a> or <a href="https://www.instagram.com/insta.paulsmith/">photos on Instagram</a>.</p>
+  <div class="prose">
+    <div class="o-media c-about-pane">
+      <h2>About</h2>
+      <p>Paul is lead designer at the National Lottery Heritage Fund based in Manchester, England.</p>
+    </div>
+    <div class="u-spacer u-spacer--divide"></div>
+    <h2>Latest blog posts</h2>
   </div>
 
-  <h2>Website build checklist</h2>
-
-  <ul class="list list--bullet">
-    <li>
-      <span class="u-strike u-strike--hover-reveal">Create
-        <a href="https://github.com/paulmsmith/website">github repository</a></span></li>
-    <li><span class="u-strike u-strike--hover-reveal">Attach repository to <a href="https://netlify.com">Netlify</a> account</span></li>
-    <li><span class="u-strike u-strike--hover-reveal">Configure Gulp task runner</span></li>
-    <li><span class="u-strike u-strike--hover-reveal">Install Sass</span></li>
-    <li><span class="u-strike u-strike--hover-reveal">Install Eleventy</span></li>
-    <li><span class="u-strike u-strike--hover-reveal">Configure basic Nunjucks templates and layouts</span></li>
-    <li><span class="u-strike u-strike--hover-reveal">Purchase webfonts</span></li>
-    <li><span class="u-strike u-strike--hover-reveal">Configure DNS</span></li>
-    <li>Configure Eleventy</li>
-    <li>Build out pages and components</li>
-    <li>Style and visual design</li>
-    <li>Write about content</li>
-    <li>Import previous blog posts</li>
+  <ul class="list list--links list--links-blog">
+  {%- for item in collections.post -%}
+    <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+  {%- endfor -%}
+    <li>Blog post title here</li>
+    <li>Some other Blog post title here</li>
+    <li>Yet another other Blog post title here</li>
+    <li>On a roll with building my blog now</li>
   </ul>
-
-  <p>
-    <span>Remember the days of Notepad and FTP?</span>
-  </p>
 
 {% endblock %}
 

@@ -1,6 +1,7 @@
 ---
 title: 'Hello'
 layout: post
+tags: post
 ---
 
 # Hi

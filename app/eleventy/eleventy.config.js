@@ -1,4 +1,5 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const util = require('util');
 const htmlMinTransform = require('./transforms/html-min-transform.js');
 const nunjucksEnv = require('./nunjucks.environment');
 const config = require('../app.config');
@@ -15,6 +16,10 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('master', 'layouts/master.njk');
   eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
+
+  eleventyConfig.addFilter('debug', function debug(value) {
+    return util.inspect(value, { compact: false });
+  });
 
   return {
     dir: {

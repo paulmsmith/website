@@ -1,3 +1,28 @@
-@import 'core/core.all';
+@import 'core/core.settings';
+@import 'theme/theme.settings';
+
+//low level helpers and functions
+@import 'core/helpers/**/**/!(*.ignore).scss';
+@import 'core/tools/all';
+
+// combine the global settings with local settings,
+// overriding gloabl with local if the same key exists
+$theme: non-destructive-map-merge($theme-global, $theme-local) !default;
+
+// lowest level default settings
+
+// using 'glob importer' see gulpfile.babel.js
+@import 'core/functions/**/**/!(*.ignore).scss';
+@import 'core/mixins/**/**/!(*.ignore).scss';
+@import 'core/objects/**/**/!(*.ignore).scss';
+@import 'core/utilities/**/**/!(*.ignore).scss';
+
+// core/foundational css
+@import 'core/core.reset';
+@import 'core/core.base';
+@import 'core/core.type';
+@import 'core/core.layout';
+
+
 @import 'components/**/**/!(*.ignore).scss';
 @import 'theme/theme.all';

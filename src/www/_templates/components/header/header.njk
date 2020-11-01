@@ -1,6 +1,37 @@
 <header class="c-header">
-  {% if title %}<h1 class="c-header__title"><a href="/" class="c-header__link">{{ title }}</a></h1>{% endif %}
-  {% if subtitle %}
-    <p class="c-header__subtitle">{{ subtitle }}</p>
-  {% endif %}
+  <div class="o-constrain">
+    <div class="c-header__wrap">
+      {% if title %}
+        <h1 class="c-header__title"><a href="/" class="c-header__link"><span>P</span><span>a</span><span>u</span><span>l</span> <span>S</span><span>m</span><span>i</span><span>t</span><span>h</span></a></h1>
+      {% endif %}
+      <div class="c-header__navigation">
+        <nav class="c-navigation" role="navigation">
+          <ul class="c-navigation__list">
+            <li class="c-navigation__item">
+              <a href="#" class="c-navigation__link">About me</a>
+            </li>
+            <li class="c-navigation__item">
+              <a href="#" class="c-navigation__link">Archives</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.c-header__navigation -->
+      <div class="c-header__masthead">
+        <img src="/assets/images/masthead_paul_default.jpg" alt="" class="c-header__masthead-image">
+      </div>
+    </div>
+    <!-- /.c-header__wrap -->
+    <div class="c-header__strap">
+      <div class="c-header__strap-item">
+        <p>Fresh pot of tea edition</p>
+      </div>
+      <div class="c-header__strap-item">
+        <p>***</p>
+      </div>
+      <div class="c-header__strap-item">
+        <p>Last issue: 20th July 2020</p>
+      </div>
+    </div>
+  </div>
 </header>
