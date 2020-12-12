@@ -2,11 +2,11 @@
   $this: #{&};
   display: block;
   margin: 0;
-  background: url(/assets/images/ornament-bg.svg) 0 50% no-repeat;
+  // background: url(/assets/images/ornament-bg.svg) 0 50% no-repeat;
   &__list {
     display: flex;
     align-items: stretch;
-    justify-content: center;
+    justify-content: start;
     margin: 0;
     padding: 0;
   }
@@ -14,16 +14,16 @@
     background: get('colour.page.background');
     flex: 0 0 1;
     list-style-type: none;
-    margin: 0;
-    border-left: 2px solid get('colour.page.border');
-    &:last-of-type {
-      border-right: 2px solid get('colour.page.border');
-    }
+    margin: 0 1rem 0 0;
+    // border-left: 2px solid get('colour.page.border');
+    // &:last-of-type {
+    //   border-right: 2px solid get('colour.page.border');
+    // }
   }
   &__link {
     display: inline-block;
     text-decoration: underline;
-    @include padding(0.75rem 1.25rem);
+    @include padding(0.75rem 0);
     color: get('colour.black.default');
     &:link:focus {
       border-bottom: 0;
