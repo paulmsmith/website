@@ -12,12 +12,12 @@
   }
 }
 
-.list--links-blog {
+.list--links-tout {
   > li {
-    padding: .3em 0;
+    padding: .25em 0;
+    border-bottom: 1px dotted #000;
   }
   > li > a {
     padding: .15em 0;
-    display: block;
   }
 }

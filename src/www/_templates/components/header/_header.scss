@@ -71,22 +71,30 @@
     border-image-slice: 28%;
     padding: 1rem 0 .75rem;
     margin: 0;
-    display: flex;
-    align-items: flex-start;
-    align-content: center;
-    align-content: space-around;
     &-item {
-      flex: 0 1 65%;
       margin: 0;
-      p {
-        font-size: 1em;
-        line-height: 1;
-      }
-      &:nth-child(2) {
-        text-align: center;
-      }
-      &:last-child {
-        text-align: right;
+    }
+    @include mq($until: medium) {
+      text-align: center;
+    }
+    @include mq($from: medium) {
+      display: flex;
+      align-items: flex-start;
+      align-content: center;
+      align-content: space-around;
+      &-item {
+        flex: 0 1 65%;
+        margin: 0;
+        p {
+          font-size: 1em;
+          line-height: 1;
+        }
+        &:nth-child(2) {
+          text-align: center;
+        }
+        &:last-child {
+          text-align: right;
+        }
       }
     }
     p {
