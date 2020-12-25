@@ -10,3 +10,18 @@
   height: 1px;
   background: #ccc;
 }
+
+.u-icon {
+  &--inline {
+    display: inline-block;
+    width: 1.5em;
+    vertical-align: middle;
+    line-height: 1;
+  }
+}
+
+.u-space {
+  &--left {
+    @include rfs(.5rem, margin-left);
+  }
+}

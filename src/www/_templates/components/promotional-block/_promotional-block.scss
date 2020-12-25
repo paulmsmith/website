@@ -1,0 +1,56 @@
+.c-promotional-block {
+  margin: 0;
+  padding: 0;
+  border: 2px solid #000;
+  border-radius: 3px;
+  @include mq($from: medium) {
+    display: flex;
+    align-items: center;
+    flex: 0 1 1;
+    flex-flow: row wrap;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1;
+    display: flex;
+    flex: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    @include mq($from: medium) {
+      flex-grow: 1;
+    }
+    &-item {
+      margin: 0;
+      padding: 0;
+      @include mq($until: medium) {
+        text-align: center;
+      }
+      @include font-size(1.2rem);
+      font-family: 'font-b';
+    }
+  }
+  &__link {
+    display: inline-block;
+    @include padding(0.5rem);
+    &:link,
+    &:hover,
+    &:active,
+    &:visited {
+      color: #000;
+    }
+  }
+  &__title {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    line-height: 1;
+    flex: 0 auto;
+    font-family: 'font-b';
+    @include font-size(1rem);
+    text-align: center;
+  }
+}

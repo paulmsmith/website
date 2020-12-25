@@ -9,11 +9,110 @@
   .c-header {
 
     &__wrap {
+      border-bottom: 2px solid #000;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      align-items: center;
+      justify-content: space-between;
+    }
 
+    &__title {
+      font-family: 'font-b';
+      flex: 0 1 65%;
+      @include rfs(0 0 .15rem 0, margin);
+      @include rfs(0 0 0 0, padding);
+      line-height: 1;
+      font-style: italic;
+      @include font-size(3.75rem);
+      @include rfs(-0.0275em, letter-spacing);
+      @include mq($from: large) {
+        @include font-size(3.8rem);
+        width: auto;
+        flex: 0 1 auto;
+      }
+    }
+
+    &__masthead {
+      order: 2;
+      flex: 0 1 0;
+      margin: 0 0 0 0;
+      img {
+        width: 100%;
+        display: block;
+        max-width: 140px;
+        margin: 0 0 0 auto;
+        transform: translateX(-50%);
+      }
+      @include mq($from: large) {
+        margin: 0;
+        flex: 0 1 14%;
+        justify-self: center;
+      }
+    }
+
+    &__navigation {
+      order: 3;
+      margin: 0;
+      padding: 0;
+      flex: 0 1 0;
+      align-self: center;
+      @include mq($from: medium) {
+        order: 3;
+        justify-self: flex-end;
+      }
+      @include font-size(1.45rem);
+    }
+
+    &__link {
+      color: inherit;
+      text-decoration: none;
     }
 
   }
 
+}
+
+.c-header__strap {
+  @include font-size(1rem);
+  border-style: solid;
+  border-width: 0 0 1rem 0;
+  border-image: url(/assets/images/double_border.svg);
+  border-image-slice: 28%;
+  padding: 1rem 0 .75rem;
+  margin: 0;
+  &-item {
+    margin: 0;
+  }
+  @include mq($until: medium) {
+    text-align: center;
+  }
+  @include mq($from: medium) {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-between;
+    &-item {
+      flex: 0 0 1;
+      margin: 0;
+      p {
+        font-size: 1em;
+        line-height: 1;
+      }
+      &:nth-child(2) {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+  p {
+    margin: 0;
+    font-family: "font-b";
+    @include font-size(1.15rem);
+  }
 }
 
 

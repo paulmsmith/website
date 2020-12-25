@@ -103,7 +103,9 @@ module.exports = function nunjucksFilters(nunj) {
   };
 
   // takes a date and makes it human readable in a given format
-  filters.formatDate = dateFormat;
+  filters.formatDate = function formatDate(theDate, formatStr) {
+    return dateFormat(theDate === 'today' ? new Date() : theDate, formatStr);
+  };
 
   // export some lodash methods directly.
   // See: https://lodash.com/docs

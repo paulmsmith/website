@@ -2,23 +2,35 @@
   <div class="o-constrain">
     <div class="c-footer-global__primary">
       <div class="c-footer-global__primary-wrap">
-
-        <div class="c-pane c-pane--concave">
+        <div class="c-pane c-pane--externals">
           <div class="c-pane__wrap">
-            lkdlkdlkdldklkdldk
+            <div class="c-promotional-block">
+              <p class="c-promotional-block__title">For up to the minute blather</p>
+              <ul class="c-promotional-block__list" role="navigation">
+                <li class="c-promotional-block__list-item">
+                  <a href="https://twitter.com/paulmsmith" class="c-promotional-block__link" title="Follow me on Twitter">Twitter</a>
+                </li>
+                <li class="c-promotional-block__list-item">
+                  <a href="https://github.com/paulmsmith" class="c-promotional-block__link" title="Follow me on Github">Github</a>
+                </li>
+                <li class="c-promotional-block__list-item">
+                  <a href="https://www.linkedin.com/in/paulmichaelsmith" class="c-promotional-block__link" title="Follow me on LinkedIn">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <!-- /.c-panel__wrap -->
         </div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eveniet atque, minima excepturi corrupti adipisci ex iste necessitatibus perferendis. Inventore numquam mollitia ducimus eveniet reprehenderit? Esse, distinctio! Excepturi, et ex.</p>
       </div>
     </div>
     <div class="c-footer-global__secondary">
       <div class="c-footer-global__secondary-item c-footer-global__secondary-item--copyright">
-        &copy; Paul Michael Smith - 2020
+        <p>
+          &copy; Paul Michael Smith - {{ 'today' | formatDate('yyyy') }}
+        </p>
       </div>
       <div class="c-footer-global__secondary-item c-footer-global__secondary-item--heritage">
-        <p>Hand coded in Manchester, England</p>
+        <p>Hand coded in Manchester, England <img src="/assets/images/mcr_bee_paulsmith.svg" alt="Symbol of Manchester" class="u-icon u-icon--inline u-space u-space--left"></p>
       </div>
     </div>
   </div>
