@@ -1,31 +1,25 @@
 ---
 title: Paul Smith - Designer
+layout: blog
 ---
-{% extends "layouts/blog.njk" %}
 
-{% block primary_content %}
-
-  <div class="prose">
-    <div class="o-media c-pane c-pane--a">
-      <p>Paul is a designer at the National Lottery Heritage Fund based in Manchester, England.</p>
-    </div>
+<div class="prose">
+  <div class="o-media c-pane c-pane--a">
+    <p>Paul is a designer at the National Lottery Heritage Fund based in Manchester, England.</p>
   </div>
+</div>
 
-  <div class="prose">
+<div class="prose">
   <h2>Notes</h2>
-  </div>
-  <!-- /.prose -->
+</div>
+<!-- /.prose -->
 
-  <ul class="list list--blog-posts">
-  {%- for item in collections.post -%}
-    <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
-  {%- endfor -%}
-    <li>Blog post title here</li>
-    <li>Some other Blog post title here</li>
-    <li>Yet another other Blog post title here</li>
-    <li>On a roll with building my blog now</li>
-  </ul>
-
-{% endblock %}
-
-{% block secondary_content %}{% endblock %}
+<ul class="list list--blog-posts">
+{%- for item in collections.post -%}
+  <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+{%- endfor -%}
+  <li>Blog post title here</li>
+  <li>Some other Blog post title here</li>
+  <li>Yet another other Blog post title here</li>
+  <li>On a roll with building my blog now</li>
+</ul>

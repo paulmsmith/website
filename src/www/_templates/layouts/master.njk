@@ -19,7 +19,6 @@
   <div class="l-doc">
 
     <header class="l-doc-header">
-      {% block doc_header %}
         {{
           component.render({
             name: 'header',
@@ -28,19 +27,15 @@
             }
           })
         }}
-      {% endblock %}
     </header>
     <!-- /.l-doc-header -->
 
     <main class="l-doc-content">
-      {% block doc_content %}
         {{ content | safe }}
-      {% endblock %}
     </main>
     <!-- /.l-doc-content -->
 
     <footer class="l-doc-footer">
-      {% block doc_footer %}
         {{
           component.render({
             name: 'footer',
@@ -49,7 +44,6 @@
             }
           })
         }}
-      {% endblock %}
     </footer>
     <!-- /.l-doc-footer -->
 

@@ -13,9 +13,9 @@ module.exports = eleventyConfig => {
   eleventyConfig.setLibrary('njk', nunjucksEnv);
 
   // set the layout aliases I use most often
-  eleventyConfig.addLayoutAlias('master', 'layouts/master.njk');
-  eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
-  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
+  eleventyConfig.addLayoutAlias('master', 'master.njk');
+  eleventyConfig.addLayoutAlias('blog', 'blog.njk');
+  eleventyConfig.addLayoutAlias('post', 'post.njk');
 
   eleventyConfig.addFilter('debug', function debug(value) {
     return util.inspect(value, { compact: false });
@@ -31,7 +31,8 @@ module.exports = eleventyConfig => {
 
       // where within the input path are the includes?
       // (macros, partials/includes, layouts)
-      includes: `_templates`
+      includes: `_templates`,
+      layouts: `_templates/layouts`
     },
     templateFormats: ['njk', 'md'],
     htmlTemplateEngine: 'njk',

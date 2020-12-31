@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const dateFormat = require('date-fns/format');
+const stringify = require('javascript-stringify').stringify;
 
 module.exports = function nunjucksFilters(nunj) {
   // if you need accss to the internal nunjucks filter you can just env
@@ -15,15 +16,14 @@ module.exports = function nunjucksFilters(nunj) {
 
   /**
    * logs an object in the template to the console on the client.
-   * @param  {Any} a any type
+   * @param  {Any} value any type
    * @return {String}   a script tag with a console.log call.
-   * @example {{ "hello world" | log }}
-   * @example {{ "hello world" | log | safe }}  [for environments with autoescaping turned on]
+   * @example {{ "hello world" | console }}
+   * @example {{ "hello world" | console | safe }}  [for environments with autoescaping turned on]
    */
-  filters.log = function log(a) {
-    return nunjucksSafe(
-      `<script>console.log(${JSON.stringify(a, null, '\t')});</script>`
-    );
+  filters.console = function console(value) {
+    const output = stringify(value, null, '\t', { maxDepth: 3 });
+    return nunjucksSafe(`<script>console.log(${output});</script>`);
   };
 
   /* eslint-disable */
