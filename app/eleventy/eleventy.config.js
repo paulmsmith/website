@@ -6,7 +6,7 @@ const config = require('../app.config');
 
 module.exports = eleventyConfig => {
   // add transforms
-  eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+  // eleventyConfig.addTransform('htmlmin', htmlMinTransform);
   // add plugins
   eleventyConfig.addPlugin(syntaxHighlight);
   // make eleventy use my custom nunjucks 'environment'

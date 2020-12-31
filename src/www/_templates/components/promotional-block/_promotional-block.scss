@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   border: 2px solid #000;
-  border-radius: 3px;
+  @include rfs(2px, border-width);
+  @include rfs(3px, border-radius);
   @include mq($from: medium) {
     display: flex;
     align-items: center;
@@ -25,11 +26,11 @@
     &-item {
       margin: 0;
       padding: 0;
+      font-family: 'font-b';
+      @include font-size(1.2rem);
       @include mq($until: medium) {
         text-align: center;
       }
-      @include font-size(1.2rem);
-      font-family: 'font-b';
     }
   }
   &__link {
@@ -40,6 +41,9 @@
     &:active,
     &:visited {
       color: #000;
+    }
+    &:hover {
+      color: rgba(#000,0.8);
     }
   }
   &__title {

@@ -1,6 +1,6 @@
 @include mq($until: medium) {
   .c-header {
-    display: none;
+    // display: none;
   }
 }
 
@@ -19,7 +19,7 @@
 
     &__title {
       font-family: 'font-b';
-      flex: 0 1 65%;
+      flex: 1 0 0;
       @include rfs(0 0 .15rem 0, margin);
       @include rfs(0 0 0 0, padding);
       line-height: 1;
@@ -27,7 +27,7 @@
       @include font-size(3.75rem);
       @include rfs(-0.0275em, letter-spacing);
       @include mq($from: large) {
-        @include font-size(3.8rem);
+        @include font-size(3rem);
         width: auto;
         flex: 0 1 auto;
       }
@@ -35,33 +35,31 @@
 
     &__masthead {
       order: 2;
-      flex: 0 1 0;
       margin: 0 0 0 0;
       img {
         width: 100%;
         display: block;
         max-width: 140px;
-        margin: 0 0 0 auto;
+        margin: 0 auto;
         transform: translateX(-50%);
       }
       @include mq($from: large) {
         margin: 0;
-        flex: 0 1 14%;
+        flex: 3 0px;
         justify-self: center;
       }
     }
 
     &__navigation {
-      order: 3;
+      display: flex;
       margin: 0;
       padding: 0;
-      flex: 0 1 0;
-      align-self: center;
+      flex: 0 0 0;
+      @include font-size(1.45rem);
+      justify-content: flex-end;
       @include mq($from: medium) {
         order: 3;
-        justify-self: flex-end;
       }
-      @include font-size(1.45rem);
     }
 
     &__link {

@@ -2,8 +2,15 @@
 
 }
 
-.c-pane--concave {
-  background: #000;
+.c-pane--a {
+  // background:lightgoldenrodyellow;
+  border: 2px solid #000;
+  // color: white;
+  padding: 1em;
+  margin: 1em 0;
+  p {
+    margin: 0;
+  }
 }
 
 // .c-pane--concave {

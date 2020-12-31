@@ -11,14 +11,12 @@ title: Paul Smith - Designer
     </div>
   </div>
 
-  <div class="u-spacer u-spacer--divide u-spacer--prominent"></div>
-
   <div class="prose">
-  <h2>Recent articles</h2>
+  <h2>Notes</h2>
   </div>
   <!-- /.prose -->
 
-  <ul class="list list--links list--links-tout">
+  <ul class="list list--blog-posts">
   {%- for item in collections.post -%}
     <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
   {%- endfor -%}

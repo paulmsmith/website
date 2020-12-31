@@ -1,6 +1,6 @@
 .list {
   > li {
-    margin: 0 0 .25em 0;
+    @include margin(0 0 .25em 0);
   }
 }
 
@@ -8,14 +8,24 @@
   list-style-type: none;
   padding: 0;
   > li {
-    margin: 0 0 .25em 0;
+    @include margin(0 0 .25em 0);
   }
 }
 
 .list--links-tout {
   > li {
-    padding: .25em 0;
+    @include padding(.25em 0);
     border-bottom: 1px dotted #000;
+  }
+  > li > a {
+    padding: .15em 0;
+  }
+}
+
+.list--links-aside {
+  > li {
+    @include padding(.2em 0);
+    @include font-size(1.2rem);
   }
   > li > a {
     padding: .15em 0;
