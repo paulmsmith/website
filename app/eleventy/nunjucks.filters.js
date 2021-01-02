@@ -1,5 +1,5 @@
+const { DateTime } = require('luxon');
 const _ = require('lodash');
-const dateFormat = require('date-fns/format');
 const stringify = require('javascript-stringify').stringify;
 
 module.exports = function nunjucksFilters(nunj) {
@@ -102,9 +102,29 @@ module.exports = function nunjucksFilters(nunj) {
     );
   };
 
-  // takes a date and makes it human readable in a given format
-  filters.formatDate = function formatDate(theDate, formatStr) {
-    return dateFormat(theDate === 'today' ? new Date() : theDate, formatStr);
+  filters.dateToFormat = function dateToFormat(date, format) {
+    return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(String(format));
+  };
+
+  filters.dateToISO = function dateToISO(date) {
+    return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({
+      includeOffset: false,
+      suppressMilliseconds: true
+    });
+  };
+
+  filters.readableDate = function readableDate(
+    dateObj,
+    dateFormat = 'd LLL yyyy'
+  ) {
+    return DateTime.fromJSDate(dateObj == 'today' ? new Date() : dateObj, {
+      zone: 'utc'
+    }).toFormat(dateFormat);
+  };
+
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  filters.htmlDateString = function htmlDateString(dateObj) {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   };
 
   // export some lodash methods directly.

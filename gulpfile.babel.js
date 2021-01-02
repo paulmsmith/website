@@ -45,7 +45,7 @@ function handleFonts() {
  */
 function handleImages() {
   return gulp
-    .src(`${config.paths.images.src}**/*`)
+    .src(`${config.paths.images.src}**/**`)
     .pipe(
       gulpIf(
         config.isNotLocal,

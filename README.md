@@ -61,3 +61,9 @@ You can get a local server running by typing: `npm start`
 ### Creating a production build
 
 Get a compiled and optimise build by typing: `npm build`
+
+### Local debugging
+
+```
+DEBUG=* npx @11ty/eleventy --config=app/eleventy/eleventy.config.js
+```

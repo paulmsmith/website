@@ -57,32 +57,6 @@ body {
   @extend %heading;
 }
 
-// .heading--aside {
-//   position: relative;
-//   &:after {
-//     content: '';
-//     display: block;
-//     width: 100%;
-//     position: absolute;
-//     top: 50%;
-//     left: 0;
-//     height: 2px;
-//     background: #000;
-//   }
-//   margin: 0;
-//   text-align: center;
-//   margin-bottom: -0.5em;
-//   line-height: 1.1;
-//   @include font-size(1.3rem);
-//   span {
-//     display: inline-block;
-//     background: #fff;
-//     padding: 0.15em 0.5em;
-//     z-index: 100;
-//     position: relative;
-//   }
-// }
-
 .heading--aside {
   margin: 0;
   display: table;
@@ -136,6 +110,15 @@ body {
   p, li {
     @extend %bodycopy;
     line-height: 1.375;
+  }
+
+  pre {
+    @include font-size(1.25rem);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
   }
 
 }

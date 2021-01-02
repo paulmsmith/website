@@ -1,0 +1,24 @@
+---
+title: Paul Smith - Designer
+layout: blog
+---
+
+<div class="prose">
+  <div class="o-media c-pane c-pane--a">
+    <p>Paul is a designer at the National Lottery Heritage Fund based in Manchester, England.</p>
+  </div>
+</div>
+
+<div class="prose">
+  <h2>Writings and notes</h2>
+</div>
+<!-- /.prose -->
+
+<ul class="list list--entries">
+{%- for item in collections.post -%}
+  <li class="list__item">
+    <a href="{{ item.url }}">{{ item.data.title }}</a>
+    <time>{{ item.date | readableDate }}</time>
+  </li>
+{%- endfor -%}
+</ul>
