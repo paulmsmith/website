@@ -123,7 +123,11 @@ function generateStylesheets() {
 
 function buildTemplates(done) {
   return cp
-    .spawn(`eleventy`, [`--config=${config.paths.eleventyConfigPath}`])
+    .spawn(`eleventy`, [`--config=${config.paths.eleventyConfigPath}`], {
+      cwd: process.cwd(),
+      detached: true,
+      stdio: 'inherit'
+    })
     .on('close', code => {
       if (code === 0) {
         browserSync.reload();

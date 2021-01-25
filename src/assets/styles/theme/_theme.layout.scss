@@ -1,3 +1,11 @@
 body {
   @include padding(1.75rem 0);
 }
+
+.l-post__body {
+
+}
+
+.l-post__footer {
+  @include margin (0 0 2rem 0);
+}

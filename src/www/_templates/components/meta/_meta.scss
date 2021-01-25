@@ -1,0 +1,20 @@
+.c-meta {
+
+}
+
+.c-meta__tags {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+  li {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+.c-meta--publication {
+  @include font-size(1.2rem);
+  color: #666;
+}

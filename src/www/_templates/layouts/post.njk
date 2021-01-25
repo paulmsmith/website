@@ -1,7 +1,38 @@
----
-layout: blog
----
+{% extends "./blog.njk" %}
 
-<div class="prose">
-  {{ content | safe }}
-</div>
+{% set currentPost = collections.all | getCollectionItem(page) %}
+
+{% block primarycontent %}
+  <div class="l-post__body">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+  <!-- /.l-post__body -->
+
+  <div class="l-post__footer">
+    <div class="c-meta c-meta--publication">
+      <span class="c-meta__publication-date">
+        <span class="c-meta__publication-date__label">Published: </span>
+        <time datetime="{{ page.date | htmlDateString }}" class="c-meta__publication-date__date c-meta__time">
+          <em>{{ page.date | readableDate }}</em>
+        </time>
+      </span>
+  {#
+      {% if currentPost.data.tags %}
+      in:
+      <ul class="c-meta__tags">
+        {% for tag in currentPost.data.tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} #}
+    </div>
+    <!-- / .c-meta -->
+  </div>
+  <!-- /.l-post__footer -->
+{% endblock %}
+
+{% block secondarycontent %}
+  dkjkdjfkjfj
+{% endblock %}

@@ -1,6 +1,64 @@
+.c-header {
+  &__link {
+    color: inherit;
+  }
+}
+
 @include mq($until: medium) {
   .c-header {
-    // display: none;
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-family: 'font-b';
+      flex: 1 0 0;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-style: italic;
+      @include font-size(2.75rem);
+      @include rfs(-0.0275em, letter-spacing);
+    }
+
+    &__masthead {
+      order: 2;
+      margin: 0;
+      img {
+        width: 100%;
+        display: block;
+        max-width: 120px;
+        margin: 0 auto;
+      }
+    }
+
+    &__navigation {
+      order: 3;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex: 0 0 100%;
+      @include font-size(1.45rem);
+      justify-content: flex-start;
+      border-style: solid;
+      border-width: 5px 0 1rem 0;
+      border-image: url(/assets/images/double_border.svg);
+      border-image-slice: 28%;
+      padding: .15rem 0 .15rem;
+    }
+
+    &__strap {
+      display: none;
+    }
+
+  }
+
+  .c-navigation {
+
   }
 }
 
@@ -41,7 +99,7 @@
         display: block;
         max-width: 140px;
         margin: 0 auto;
-        transform: translateX(-50%);
+        transform: translateX(-35%);
       }
       @include mq($from: large) {
         margin: 0;

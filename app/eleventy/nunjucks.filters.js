@@ -106,20 +106,18 @@ module.exports = function nunjucksFilters(nunj) {
     return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(String(format));
   };
 
-  filters.dateToISO = function dateToISO(date) {
+  filters.dateToISO = function dateToISO(date, format) {
     return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({
       includeOffset: false,
-      suppressMilliseconds: true
+      suppressMilliseconds: true,
+      format: format || 'basic'
     });
   };
 
-  filters.readableDate = function readableDate(
-    dateObj,
-    dateFormat = 'd LLL yyyy'
-  ) {
+  filters.readableDate = function readableDate(dateObj, dateFormat) {
     return DateTime.fromJSDate(dateObj == 'today' ? new Date() : dateObj, {
       zone: 'utc'
-    }).toFormat(dateFormat);
+    }).toFormat(dateFormat ? dateFormat : 'dd LLL yyyy');
   };
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

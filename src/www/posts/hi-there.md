@@ -1,8 +1,7 @@
 ---
 title: 'Hello world'
-layout: post
-tags: ['post', 'blogging']
 date: 2021-01-01
+tags: ['blogging']
 ---
 
 # Hello world

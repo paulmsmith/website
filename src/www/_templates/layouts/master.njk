@@ -4,21 +4,20 @@
 <html lang="{{ page.lang | d('en-GB') }}" dir="{{ page.dir | d('ltr') }}">
 <head>
   <title>{% block title %}{{ title | d('title not set') }}{% endblock %}</title>
-  {% block metatags %}
+  {%- block metatags -%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {% endblock %}
-  {% block stylsheets %}
+  {%- endblock -%}
+  {%- block stylsheets -%}
     <link rel="stylesheet" href="/assets/styles/site.css">
     <link rel="stylesheet" href="/assets/styles/syntax.css">
-  {% endblock %}
+  {%- endblock -%}
 </head>
 <body>
-  {% block after_opening_body %}{% endblock %}
+  {%- block after_opening_body -%}{%- endblock -%}
   <div class="l-doc">
-
-    <header class="l-doc-header">
+    <header class="l-doc-header" role="banner">
         {{
           component.render({
             name: 'header',
@@ -29,13 +28,11 @@
         }}
     </header>
     <!-- /.l-doc-header -->
-
     <main class="l-doc-content">
-        {{ content | safe }}
+        {% block content %}{% endblock %}
     </main>
     <!-- /.l-doc-content -->
-
-    <footer class="l-doc-footer">
+    <footer class="l-doc-footer" role="siteinfo">
         {{
           component.render({
             name: 'footer',
@@ -46,19 +43,14 @@
         }}
     </footer>
     <!-- /.l-doc-footer -->
-
   </div>
   <!-- /.l-doc -->
-
-  {% block before_closing_body %}{% endblock %}
-
+  {%- block before_closing_body -%}{%- endblock -%}
   <!-- detect js -->
   <script id="detectJS">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-
-  {% if currentEnv == 'production' %}
-    <script async defer src="https://mi.paulsmith.site/app.js"></script>
-    <noscript><img src="https://mi.paulsmith.site/image.gif" alt=""></noscript>
-  {% endif %}
-
+  {%- if currentEnv == 'production' -%}
+  <script async defer src="https://mi.paulsmith.site/app.js"></script>
+  <noscript><img src="https://mi.paulsmith.site/image.gif" alt=""></noscript>
+  {%- endif -%}
 </body>
 </html>

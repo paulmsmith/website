@@ -6,9 +6,14 @@ const config = require('../app.config');
 
 module.exports = eleventyConfig => {
   // add transforms
-  // eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+  if (config.currentEnv !== 'dev') {
+    // if currently in dev then don't minify the HTML output
+    eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+  }
+
   // add plugins
   eleventyConfig.addPlugin(syntaxHighlight);
+
   // make eleventy use my custom nunjucks 'environment'
   eleventyConfig.setLibrary('njk', nunjucksEnv);
 
@@ -19,6 +24,10 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter('debug', function debug(value) {
     return util.inspect(value, { compact: false });
+  });
+
+  eleventyConfig.addCollection('post', collection => {
+    return [...collection.getFilteredByGlob('./src/www/posts/*.md')].reverse();
   });
 
   return {
