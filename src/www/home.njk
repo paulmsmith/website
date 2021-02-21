@@ -1,24 +1,27 @@
 ---
-title: Paul Smith - Designer
-layout: blog
+title: "Paul Smith - Interaction Designer"
 ---
+{% extends "./_templates/layouts/blog.njk" %}
+{% block primarycontent %}
 
-<div class="prose">
-  <div class="o-media c-pane c-pane--a">
-    <p>Paul is a designer at the National Lottery Heritage Fund based in Manchester, England.</p>
+  <div class="prose">
+    <div class="o-media c-pane c-pane--a">
+      <p>Paul is a designer at the Ministry of Housing based in Manchester, England.</p>
+    </div>
   </div>
-</div>
 
-<div class="prose">
-  <h2>Writings and notes</h2>
-</div>
-<!-- /.prose -->
+  <div class="prose">
+    <h2>Writings and notes</h2>
+  </div>
+  <!-- /.prose -->
 
-<ul class="list list--entries">
-{%- for item in collections.post -%}
-  <li class="list__item">
-    <a href="{{ item.url }}">{{ item.data.title }}</a>
-    <time>{{ item.date | readableDate }}</time>
-  </li>
-{%- endfor -%}
-</ul>
+  <ul class="list list--entries">
+  {%- for item in collections.post -%}
+    <li class="list__item">
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+      <time>{{ item.date | readableDate }}</time>
+    </li>
+  {%- endfor -%}
+  </ul>
+
+{% endblock %}
