@@ -6,6 +6,12 @@ tags: ['agile']
 
 # {{ title }}
 
+If you have not yet read [Agile walls, what are they good for?](../agile-walls-what-are-they-good-for/) that might be worth your time before reading this post.
+
+Otherwise dive into some tips for agile walls.
+
+---
+
 ## Make them clear
 They are supposed to be rough and ready, the lack of polish is what makes them quick and easy to use but they should be clear and make sense the following day and to fresh eyes.
 

@@ -49,8 +49,7 @@
   <!-- detect js -->
   <script id="detectJS">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   {%- if currentEnv == 'production' -%}
-  <script async defer src="https://mi.paulsmith.site/app.js"></script>
-  <noscript><img src="https://mi.paulsmith.site/image.gif" alt=""></noscript>
+    <script async defer data-domain="paulsmith.site" src="https://plausible.io/js/plausible.js"></script>
   {%- endif -%}
 </body>
 </html>

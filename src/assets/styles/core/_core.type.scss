@@ -125,4 +125,13 @@ body {
     display: block;
   }
 
+  hr {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    border: 0;
+    border-bottom: 2px dotted #666;
+    background: 0;
+  }
+
 }

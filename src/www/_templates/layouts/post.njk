@@ -18,15 +18,15 @@
           <em>{{ page.date | readableDate }}</em>
         </time>
       </span>
-  {#
+
       {% if currentPost.data.tags %}
       in:
       <ul class="c-meta__tags">
         {% for tag in currentPost.data.tags %}
-          <li>{{ tag }}</li>
+          <li>{{ tag | title }}</li>
         {% endfor %}
       </ul>
-      {% endif %} #}
+      {% endif %}
     </div>
     <!-- / .c-meta -->
   </div>

@@ -8,7 +8,7 @@ tags: ['agile']
 
 I have been working within agile delivery teams for quite a few years now and have often been nominated, asked or took it upon myself to help my teams establish their ‘physical wall-space’.
 
-Below are some thoughts about why Agile Walls can be really valuable and hopefully some inspiration for when you create your own.
+The following are some thoughts about why Agile Walls can be really valuable and hopefully some inspiration for when you create your own.
 
 ---
 
@@ -45,6 +45,8 @@ I heard this analogy for something else recently and I really like it when think
 People gather around Campfires to have conversations and tell stories. They’re not formal and you don’t need to build any serious infrastructure to support them.
 
 As Alan Cooper says, throwaway drawings, discussions and notations are what whiteboards are for.
+
+---
 
 ### Further reading
 
