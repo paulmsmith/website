@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paul Smith</title>
-  <style>
-    html {
-      font-family: "Helvetica Neue", "Helvetica", "Arial", Sans-serif;
-    }
-    body {
-      padding: 1rem;
-    }
-    * {
-      margin: 0 0 1rem 0;
-    }
-  </style>
-</head>
-<body>
-  <h1>Paul Smith</h1>
-  <p>Designer at the National Lottery Heritage Fund</p>
-  <p><a href="https://twitter.com/paulmsmith">Follow me on twitter</a>. This blog will be live by Feb 2021.</p>
-</body>
-</html>
+---
+title: "Paul Smith - Interaction Designer"
+hide_blogroll: true
+---
+{% extends "./_templates/layouts/blog.njk" %}
+{% block primarycontent %}
 
+  <div class="prose">
+    <div class="o-media c-pane c-pane--a">
+      <p>Paul is a designer at the National Lottery Heritage Fund. Read more <a href="/about/">about Paul</a>.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h2>Writings and notes</h2>
+  </div>
+  <!-- /.prose -->
+
+  <ul class="list list--entries">
+  {%- for item in collections.post -%}
+    <li class="list__item">
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+      <time>{{ item.date | readableDate }}</time>
+    </li>
+  {%- endfor -%}
+  </ul>
+
+{% endblock %}
+
+{% block secondarycontent %}
+  <div class="c-aside c-aside--dashed-concaved">
+    <p>This website is still under development.</p>
+  </div>
+{% endblock %}

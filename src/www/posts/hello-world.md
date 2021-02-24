@@ -28,7 +28,7 @@ Why? Because I have a mind for continual improvement, I'm not sure my brain can 
 
 Often this serves my work and my employers well. I'm driven to keep improving the services they have hired me to develop.
 
-That fact that the work is not for me but for somebody else is crucial.
+That the work is not for me but for somebody else is crucial.
 
 Employers and stakeholders impose what designers like myself desperately need: constraints.
 
@@ -41,6 +41,13 @@ For personal projects that is not the case. I answer to nobody. The possibilitie
 So mindful of my perfectionistic demons, I have resolved to just get this thing out there.
 
 People will never see my work if I need to be satisfied with it, I've come to accept that will never happen on personal projects.
+
+I have a list of things I'd like to do to iterate the version I publish today, which looks like:
+
+- Work on performance optimisation. I have not done anything specifc on this yet.
+- Rejig mark-up and run through more than just basic accessibility checks.
+- Add better links and organisation for content. Next/Back that sort of thing.
+- Automatically handle images, perhaps with this [11ty image plugin](https://www.11ty.dev/docs/plugins/image/).
 
 You can't provide any value until you deliver something. If it's good enough today, that is much better than perfect never.
 

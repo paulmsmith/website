@@ -3,6 +3,7 @@
   src: url('/assets/fonts/SuisseIntl-Medium.woff2') format('woff2'),
     url('/assets/fonts/SuisseIntl-Medium.woff') format('woff');
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url('/assets/fonts/font-b-book.woff2') format('woff2'),
     url('/assets/fonts/font-b-book.woff') format('woff');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   src: url('/assets/fonts/font-b-bold.woff2') format('woff2'),
     url('/assets/fonts/font-b-bold.woff') format('woff');
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
   src: url('/assets/fonts/font-b-bolditalic.woff2') format('woff2'),
     url('/assets/fonts/font-b-italic.woff') format('woff');
   font-style: italic;
+  font-display: swap;
 }
 
 html {

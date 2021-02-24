@@ -6,18 +6,22 @@
         {% block primarycontent %}{% endblock %}
     </div>
     <div class="o-layout__item u-1/3@medium">
-      <div class="c-aside">
-        {% if blogroll %}
+      {% if blogroll and not hide_blogroll %}
+      <div class="c-aside c-aside--ribbed">
           <h4 class="o-heading heading--aside">Blogroll</h4>
           <ul class="list list--links list--links-aside">
             {% for blogitem in blogroll %}
             <li><a href="{{ blogitem.url }}">{{ blogitem.text }}</a></li>
             {% endfor %}
           </ul>
-        {% endif %}
       </div>
+      {% endif %}
       <!-- /.c-aside -->
-      {% block secondarycontent %}{% endblock %}
+      {% block secondarycontent %}
+        <div class="c-aside c-aside--dashed-concaved">
+          <p>This website is still under development.</p>
+        </div>
+      {% endblock %}
     </div>
   </div>
 </div>
