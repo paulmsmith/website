@@ -123,11 +123,18 @@ function generateStylesheets() {
 
 function buildTemplates(done) {
   return cp
-    .spawn(`eleventy`, [`--config=${config.paths.eleventyConfigPath}`], {
-      cwd: process.cwd(),
-      detached: true,
-      stdio: 'inherit'
-    })
+    .spawn(
+      `eleventy`,
+      [
+        `--config=${config.paths.eleventyConfigPath}`
+        // `--port=${config.envs.development.port}`
+      ],
+      {
+        cwd: process.cwd(),
+        detached: true,
+        stdio: 'inherit'
+      }
+    )
     .on('close', code => {
       if (code === 0) {
         browserSync.reload();
@@ -180,7 +187,8 @@ function serve() {
     notify: false,
     server: [config.paths.distDir],
     tunnel: false,
-    open: false
+    open: false,
+    port: config.envs.development.port || '3000'
   });
   watch();
 }

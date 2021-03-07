@@ -7,7 +7,7 @@ hide_blogroll: true
 
   <div class="prose">
     <div class="o-media c-pane c-pane--a">
-      <p>Paul is a designer at the National Lottery Heritage Fund. Read more <a href="/about/">about Paul</a>.</p>
+      <p>I'm a designer at the National Lottery Heritage Fund based in rainy Manchester, UK.</p>
     </div>
   </div>
 
@@ -19,8 +19,8 @@ hide_blogroll: true
   <ul class="list list--entries">
   {%- for item in collections.post -%}
     <li class="list__item">
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
       <time>{{ item.date | readableDate }}</time>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
     </li>
   {%- endfor -%}
   </ul>

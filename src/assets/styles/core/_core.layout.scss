@@ -6,3 +6,15 @@
     margin: 0;
   }
 }
+
+%l-divider {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border: 0;
+}
+
+.l-divider {
+  @extend %l-divider;
+}

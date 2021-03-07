@@ -31,9 +31,8 @@
 }
 
 html {
-  font-kerning: normal;
   text-rendering: optimizeLegibility;
-  font-kerning: normal;
+  font-kerning: 'kern';
   font-feature-settings: 'kern';
   -webkit-font-feature-settings: 'kern';
 }
@@ -126,12 +125,11 @@ body {
   }
 
   hr {
-    display: block;
-    height: 0;
-    overflow: hidden;
-    border: 0;
-    border-bottom: 2px dotted #666;
-    background: 0;
+    @extend %l-divider;
+    background: transparent url(/assets/images/diamond_divider.svg) no-repeat 50% 50%;
+    height: 10px;
+    @include margin-top(2.25em);
+    @include margin-bottom(2.75em);
   }
 
 }

@@ -38,6 +38,8 @@ Leisa made an excellent point in her post “[What walls are for](http://www.dis
 
 > Sometimes the walls are not for you but for other people.
 
+---
+
 ## Walls are a team’s campfire
 
 I heard this analogy for something else recently and I really like it when thinking about a team’s agile walls.
@@ -54,4 +56,3 @@ As Alan Cooper says, throwaway drawings, discussions and notations are what whit
 - [The role of the Agile Wall](https://gds.blog.gov.uk/2012/12/19/the-agile-wall/) by Emily Webber
 - [The Anatomy of our Kanban board](https://medium.com/@eleanor.mollett/the-anatomy-of-our-kanban-board-93f694b603e0) by Eleanor Mollett
 - [Know whiteboards, Know Design](https://medium.com/@MrAlanCooper/know-whiteboards-know-design-eb3a362df684) by Alan Cooper
-

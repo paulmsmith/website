@@ -31,7 +31,7 @@ $mq-breakpoints: (
 $rfs-breakpoint: 1200px;
 
 // Factor of decrease
-$rfs-factor: 15;
+$rfs-factor: 15 !default;
 
 // Mode. Possibilities: "min-media-query", "max-media-query"
 // $rfs-mode: max-media-query;

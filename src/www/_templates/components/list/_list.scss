@@ -36,22 +36,38 @@
   list-style-type: none;
   padding: 0;
   .list__item {
-    @include padding(0.5em 0);
-    line-height: 1.2;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-bottom: 1px solid #dfdfdf;
-    > * {
-      margin: 0;
-      flex: 0 0 1;
+    @include padding-bottom(1.5rem);
+    &:not(:last-child) {
+      @include margin-bottom(1.5rem);
     }
+    border-bottom: 1px solid #dfdfdf;
     a {
-
+      display: block;
     }
     time {
       @include font-size(0.7em);
       color: #666;
+      display: block;
+      @include margin-bottom(.25rem);
     }
+    > * {
+      margin: 0;
+      // flex: auto;
+    }
+    @include mq($from: medium) {
+      line-height: 1.2;
+      display: flex;
+      flex-flow: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        flex-direction: row-reverse;
+      }
+      time {
+        min-width: 25%;
+      text-align: right;
+      }
+    }
+
   }
 }

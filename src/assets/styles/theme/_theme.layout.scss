@@ -7,5 +7,12 @@ body {
 }
 
 .l-post__footer {
-  @include margin (0 0 2rem 0);
+  @include margin(2em 0)
+}
+
+.l-divider--zig-to-the-zag {
+  height: 10px;
+  background: url(/assets/images/zigzag_divider.svg) round 0 0;
+  @include margin-top(1.25em);
+  @include margin-bottom(1.25em);
 }

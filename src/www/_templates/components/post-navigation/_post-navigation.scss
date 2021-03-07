@@ -1,0 +1,30 @@
+.c-post-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  @include font-size(1.25rem);
+  @include mq($from: large) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &__item {
+      margin: 0;
+      &--prev {
+        [dir="rtl"] & {
+          text-align: right;
+        }
+        [dir="ltr"] & {
+          text-align: left;
+        }
+      }
+      &--next {
+        [dir="ltr"] & {
+          text-align: right;
+        }
+        [dir="rtl"] & {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

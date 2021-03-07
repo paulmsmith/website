@@ -9,7 +9,8 @@ const config = {
   envs: {
     development: {
       name: 'dev',
-      assetsURL: ''
+      assetsURL: '',
+      port: '3010'
     },
     production: {
       name: 'production',
