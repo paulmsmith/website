@@ -1,30 +1,34 @@
 module.exports = [
   {
-    url: 'https://adamsilver.io/articles/',
-    text: 'Adam Silver'
+    text: 'Adam Silver',
+    url: 'https://adamsilver.io/articles/'
   },
   {
-    url: 'http://benholliday.com/',
-    text: 'Ben Holliday'
+    text: 'Ben Holliday',
+    url: 'http://benholliday.com/'
   },
   {
-    url: 'https://words.htmlandbacon.com/',
-    text: 'Colin Oakley'
+    text: 'Benjy Stanton',
+    url: 'https://www.benjystanton.co.uk/'
   },
   {
-    url: 'https://blog.louisedowne.com/',
-    text: 'Lou Downe'
+    text: 'Colin Oakley',
+    url: 'https://words.htmlandbacon.com/'
   },
   {
-    url: 'http://tomsteinberg.co.uk/',
-    text: 'Tom Steinberg'
+    text: 'Lou Downe',
+    url: 'https://blog.louisedowne.com/'
   },
   {
-    url: 'http://loft27design.com/writing.html',
-    text: 'Stephen McCarthy'
+    text: 'Tom Steinberg',
+    url: 'http://tomsteinberg.co.uk/'
   },
   {
-    url: 'https://www.ermlikeyeah.com/all-posts',
-    text: 'Simon Wilson'
+    text: 'Simon Wilson',
+    url: 'https://www.ermlikeyeah.com/all-posts'
+  },
+  {
+    text: 'Stephen McCarthy',
+    url: 'http://loft27design.com/writing.html'
   }
 ];
