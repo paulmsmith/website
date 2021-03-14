@@ -28,3 +28,8 @@
     }
   }
 }
+
+.c-post-navigation .c-post-navigation__item:nth-last-child(-n+1):first-child,
+.c-post-navigation .c-post-navigation__item:nth-last-child(-n+1):first-child ~ .c-post-navigation__item {
+  width: 100%;
+}

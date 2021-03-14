@@ -1,0 +1,23 @@
+{% extends "./master.njk" %}
+{% block content %}
+<div class="o-constrain">
+  <div class="o-layout">
+    <div class="o-layout__item u-2/3@large">
+
+      <div class="l-post__body">
+        <div class="prose">
+
+          {% block primarycontent %}{{ content | safe  }}{% endblock %}
+
+        </div>
+      </div>
+      <!-- /.l-post__body -->
+
+    </div>
+    <div class="o-layout__item u-1/3@large">
+      {% block secondarycontent %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,5 +1,10 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const util = require('util');
+const markdownIt = require('markdown-it')({
+  html: true,
+  linkify: false,
+  typographer: true
+});
 const htmlMinTransform = require('./transforms/html-min-transform.js');
 const nunjucksEnv = require('./nunjucks.environment');
 const config = require('../app.config');
@@ -24,6 +29,12 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter('debug', function debug(value) {
     return util.inspect(value, { compact: false });
+  });
+
+  eleventyConfig.addPairedShortcode('markdown', (content, inline = null) => {
+    return inline
+      ? markdownIt.renderInline(content)
+      : markdownIt.render(content);
   });
 
   eleventyConfig.addCollection('post', collection => {
