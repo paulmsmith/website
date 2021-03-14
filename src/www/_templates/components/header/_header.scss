@@ -74,13 +74,13 @@
       flex-wrap: wrap;
       align-items: flex-end;
       align-items: center;
-      justify-content: space-between;
+      justify-content:space-between;
+      position: relative;
     }
 
     &__title {
       -moz-osx-font-smoothing: grayscale;
       font-family: 'font-b';
-      flex: 1 0 0;
       @include rfs(0 0 .15rem 0, margin);
       @include rfs(0 0 0 0, padding);
       line-height: 1;
@@ -97,16 +97,15 @@
 
     &__masthead {
       order: 2;
-      margin: 0 0 0 0;
+      margin: 0;
       img {
         width: 100%;
         display: block;
         max-width: 140px;
-        margin: 0 auto;
+        margin: 0;
       }
       @include mq($from: large) {
         margin: 0;
-        flex: 3 0px;
         justify-self: center;
       }
     }
@@ -115,7 +114,6 @@
       display: flex;
       margin: 0;
       padding: 0;
-      flex: 0 0 0;
       @include font-size(1.45rem);
       justify-content: flex-end;
       @include mq($from: medium) {
