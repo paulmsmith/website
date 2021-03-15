@@ -182,3 +182,7 @@ $theme-widths-breakpoint-separator: \@ !default;
   }
 
 }
+
+img.u-1#{$theme-widths-delimiter}1 {
+  height: auto;
+}
