@@ -38,9 +38,18 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addShortcode(
-    'newcloudinaryImage',
-    (path, transforms, alt, width, height, CSSClass) =>
-      `<img src="https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/${transforms}/${path}" alt="${alt}" loading="lazy" width="${width}" height="${height}" class="${CSSClass}">`
+    'cloudImage',
+    (path, transforms, alt = '', width, height, classList) => {
+      let URLPath = '';
+      if (config.currentEnv !== 'dev') {
+        URLPath = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/q_auto:good,f_auto,${transforms}`;
+      }
+      return `<img src="${URLPath}${path}" alt="${alt || ''}" loading="lazy"${
+        width ? ` width="${width}"` : ''
+      }${height ? ` height="${height}"` : ''}${
+        classList ? ` class="${classList}"` : ''
+      }>`;
+    }
   );
 
   eleventyConfig.addPairedShortcode('markdown', (content, inline = null) => {
