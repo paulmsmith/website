@@ -16,14 +16,12 @@
     <hr class="l-divider l-divider--zig-to-the-zag">
 
     <div class="c-meta c-meta--publication">
-
       <span class="c-meta__publication-date">
         <span class="c-meta__publication-date__label">Published: </span>
         <time datetime="{{ page.date | htmlDateString }}" class="c-meta__publication-date__date c-meta__time">
           <em>{{ page.date | readableDate }}</em>
         </time>
       </span>
-
       {% if currentPost.data.tags %}
       in:
       <ul class="c-meta__tags">
@@ -31,6 +29,11 @@
           <li>{{ tag | title }}</li>
         {% endfor %}
       </ul>
+      {% endif %}
+      {% if original_url %}
+      <div class="c-meta__row c-meta__row--small">
+        Originally posted:<br> <a href="{{ original_url }}">{{ original_url }}</a>
+      </div>
       {% endif %}
     </div>
     <!-- / .c-meta -->

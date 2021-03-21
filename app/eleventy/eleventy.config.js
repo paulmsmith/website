@@ -5,10 +5,12 @@ const markdownIt = require('markdown-it')({
   linkify: false,
   typographer: true
 });
+const pluginCloudinaryImage = require('eleventy-plugin-cloudinary');
 const htmlMinTransform = require('./transforms/html-min-transform.js');
 const nunjucksEnv = require('./nunjucks.environment');
 const config = require('../app.config');
 
+/* eslint no-param-reassign: ["error", { "props": false }] */
 module.exports = eleventyConfig => {
   // add transforms
   if (config.currentEnv !== 'dev') {
@@ -16,8 +18,12 @@ module.exports = eleventyConfig => {
     eleventyConfig.addTransform('htmlmin', htmlMinTransform);
   }
 
+  // cloudinary config
+  eleventyConfig.cloudinaryCloudName = 'paulmsmith';
+
   // add plugins
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginCloudinaryImage);
 
   // make eleventy use my custom nunjucks 'environment'
   eleventyConfig.setLibrary('njk', nunjucksEnv);
@@ -30,6 +36,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('debug', function debug(value) {
     return util.inspect(value, { compact: false });
   });
+
+  eleventyConfig.addShortcode(
+    'newcloudinaryImage',
+    (path, transforms, alt, width, height, CSSClass) =>
+      `<img src="https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/${transforms}/${path}" alt="${alt}" loading="lazy" width="${width}" height="${height}" class="${CSSClass}">`
+  );
 
   eleventyConfig.addPairedShortcode('markdown', (content, inline = null) => {
     return inline

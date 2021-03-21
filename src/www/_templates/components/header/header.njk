@@ -2,11 +2,11 @@
   <div class="o-constrain">
     <div class="c-header__wrap">
       {% if title %}
-        <h1 class="c-header__title">
+        <{{ 'h1' if isHomepage else 'div' }} class="c-header__title">
           <a href="/" class="c-header__link">
             <span>P</span><span>a</span><span>u</span><span>l</span> <span>S</span><span>m</span><span>i</span><span>t</span><span>h</span>
           </a>
-        </h1>
+        </{{ 'h1' if isHomepage else 'div' }}>
       {% endif %}
       <div class="c-header__navigation">
         <nav class="c-navigation" role="navigation">
@@ -30,7 +30,7 @@
       <div class="c-header__strap-item">
         <p>Fresh pot of tea edition</p>
       </div>
-      <div class="c-header__strap-item">
+      <div class="c-header__strap-item" aria-hidden>
         <p>⭑⭑⭑</p>
       </div>
       <div class="c-header__strap-item">

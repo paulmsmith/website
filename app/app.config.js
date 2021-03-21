@@ -10,7 +10,7 @@ const config = {
     development: {
       name: 'dev',
       assetsURL: '',
-      port: '3010'
+      port: '3000'
     },
     production: {
       name: 'production',

@@ -14,6 +14,15 @@
   }
 }
 
+.c-meta__row {
+  &--small {
+    @include font-size(0.8em);
+    :is(a, a:visited, a:hover, a:active) {
+      color: inherit;
+    }
+  }
+}
+
 .c-meta--publication {
   @include font-size(1.2rem);
   color: #666;

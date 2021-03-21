@@ -24,11 +24,12 @@ a,
 a:link {
   color: get('colour.anchor.default.link');
   text-decoration-color: inherit;
-  &:focus {
-    color: inherit;
-    background-color: #ffdd2a;
-    border-bottom: 4px solid get('colour.page.border');
-    outline: 0;
-    text-decoration: none;
-  }
+}
+
+:focus {
+  color: inherit;
+  background-color: get('colour.page.focus');
+  border-bottom: 4px solid get('colour.page.border');
+  outline: 0;
+  text-decoration: none;
 }

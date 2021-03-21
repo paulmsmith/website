@@ -3,15 +3,31 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | d('en-GB') }}" dir="{{ page.dir | d('ltr') }}">
 <head>
+  <!-- UA configuration -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% block title %}{{ title | d('title not set') }}{% endblock %}</title>
   {%- block metatags -%}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- open graph data -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Paul Smith" />
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" name="description" content="{{ meta.description | d('The website of Paul Smith, a designer in the UK Government') }}">
+  <meta property="og:url" content="{{ page.url }}">
+  <meta property="og:url" content="https://paulsmith.site" />
+  <meta property="og:image" content="/assets/images/meta/og_image.jpg" />
+  <!-- twitter card meta -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="paulmsmith">
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image:src" content="/assets/images/meta/twitter_image.jpg">
+  <meta name="twitter:image:alt" content="Paul Smith's profile picture.">
   {%- endblock -%}
   {%- block stylsheets -%}
-    <link rel="stylesheet" href="/assets/styles/site.css">
-    <link rel="stylesheet" href="/assets/styles/syntax.css">
+  <link rel="stylesheet" href="/assets/styles/site.css">
+  <link rel="stylesheet" href="/assets/styles/syntax.css">
   {%- endblock -%}
 </head>
 <body>
@@ -22,7 +38,8 @@
           component.render({
             name: 'header',
             fields: {
-              title: "Paul Smith"
+              title: "Paul Smith",
+              isHomepage: isHomepage
             }
           })
         }}
@@ -49,8 +66,7 @@
   <!-- detect js -->
   <script id="detectJS">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   {%- if currentEnv == 'production' -%}
-    {# <script async defer data-domain="paulsmith.site" src="https://plausible.io/js/plausible.js"></script> #}
-    <script async defer data-domain="paulsmith.site" src="https://loggychops.paulsmith.site/js/index.js"></script>
+  <script async defer data-domain="paulsmith.site" src="https://loggychops.paulsmith.site/js/index.js"></script>
   {%- endif -%}
 </body>
 </html>

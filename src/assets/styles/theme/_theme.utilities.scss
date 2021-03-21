@@ -2,15 +2,14 @@
   background: #000;
 }
 
-
-.u-margin-\!-0 {
+.u-\!-margin-0 {
   margin: 0!important;
 }
 
-.u-margin-\!-1 {
+.u-\!-margin-1 {
   @include margin(1em);
 }
 
-.u-margin-bottom\!-1 {
+.u-\!-margin-bottom-1 {
   @include margin-bottom(1em);
 }

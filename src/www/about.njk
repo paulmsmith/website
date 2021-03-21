@@ -1,13 +1,16 @@
 ---
 title: "About - Paul Smith - Interaction Designer"
+permalink: '/about/index.html'
 ---
-{% extends "../_templates/layouts/page.njk" %}
+{% extends "./_templates/layouts/page.njk" %}
 {% block primarycontent %}
 
   {% markdown %}
   # About Paul
 
-  <p><img src="/assets/images/paulmsmith-pres-169.jpeg" alt="Photograph of Paul Smith, stood outdoors and smiling at the camera" width="800" height="450" class="u-1/1"></p>
+  <p>{% newcloudinaryImage "/assets/images/paulmsmith-pres-169.jpeg", "w_320,f_auto", "Photograph of Paul Smith, stood outdoors and smiling at the camera", "800", "450", "u-1/1" %}</p>
+
+  {# <img src="/assets/images/paulmsmith-pres-169.jpeg" alt="Photograph of Paul Smith, stood outdoors and smiling at the camera" width="800" height="450" class="u-1/1"> #}
 
   Paul Smith is an experienced interaction designer and front-end developer from Manchester, UK.
 
@@ -18,7 +21,7 @@ title: "About - Paul Smith - Interaction Designer"
 
   ## Ways of working
 
-  User research is critical to my work as designer. I have much higher confidence in my work when it is informed by user research I have taken part in.
+  User research is critical to the work of a designer. We can have much higher confidence in our work when it is informed by user research, especial reseach we have taken part in.
 
   Sharing and working in the open. The sooner you share, the sooner mistakes are spotted, ideas are refined and people are included.
 
