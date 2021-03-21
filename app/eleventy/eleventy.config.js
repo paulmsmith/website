@@ -42,7 +42,7 @@ module.exports = eleventyConfig => {
     (path, alt = '', width, height, classList) => {
       let URLPath = '';
       if (config.currentEnv !== 'dev') {
-        URLPath = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/q_auto:good,f_auto/https://paulsmith.site`;
+        URLPath = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/w_iw,q_auto:good,f_auto/https://paulsmith.site`;
       }
       return `<img src="${URLPath}${path}" alt="${alt || ''}" loading="lazy"${
         width ? ` width="${width}"` : ''
