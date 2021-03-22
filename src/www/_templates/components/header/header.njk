@@ -1,3 +1,4 @@
+{%- import "includes/render_component.njk" as component -%}
 <div class="c-header">
   <div class="o-constrain">
     <div class="c-header__wrap">
@@ -22,7 +23,18 @@
       </div>
       <!-- /.c-header__navigation -->
       <div class="c-header__masthead">
-        <img src="/assets/images/masthead_paul_default.jpg" alt="" class="c-header__masthead-image">
+        {{
+          component.render({
+            name: 'image',
+            fields: {
+              imagePath: 'masthead_paul_default.jpg',
+              alt: '',
+              width: '675',
+              height: '374',
+              classList: 'c-header__masthead-image'
+            }
+          })
+        }}
       </div>
     </div>
     <!-- /.c-header__wrap -->

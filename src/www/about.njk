@@ -8,14 +8,24 @@ permalink: '/about/index.html'
   {% markdown %}
   # About Paul
 
-  <p>{% cloudImage "/assets/images/paulmsmith-pres-169.jpeg", "Photograph of Paul Smith, stood outdoors and smiling at the camera", "800", "450", "u-1/1" %}</p>
-
-  {# <img src="/assets/images/paulmsmith-pres-169.jpeg" alt="Photograph of Paul Smith, stood outdoors and smiling at the camera" width="800" height="450" class="u-1/1"> #}
-
   Paul Smith is an experienced interaction designer and front-end developer from Manchester, UK.
 
-  He is currently a Senior Interaction Designer at the [Ministry for Housing, Communities and Local Government](https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government/about) (MHCLG).
+  <p>
+      {{
+          component.render({
+            name: 'image',
+            fields: {
+              imagePath: 'paulmsmith-pres-169.jpeg',
+              alt: 'Paul, stood up presenting infront of a TV Screen with the title DWP Design System',
+              width: '800',
+              height: '450',
+              classList: 'u-1/1'
+            }
+          })
+      }}
+  </p>
 
+  He is currently a Senior Interaction Designer at the [Ministry for Housing, Communities and Local Government](https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government/about) (MHCLG).
 
   ---
 

@@ -1,0 +1,20 @@
+{% set cloudinaryURL = 'https://res.cloudinary.com/paulmsmith/image/fetch' %}
+{% set imagesPath = "assets/images/" %}
+{% set siteURL = 'https://paulsmith.site' %}
+{% set imgSRC = (cloudinaryURL + '/' + transforms | d('w_iw,q_auto:good,f_auto') + '/' + siteURL + '/' + imagesPath + imagePath) %}
+{% set imgSRClocal = ('/' + imagesPath + imagePath) %}
+{% if (currentEnv != 'dev') %}
+<img sizes="(min-width: 30em) 28em, 100vw"
+    srcset="{{ cloudinaryURL }}/f_auto,q_{{ quality | d('auto:good') }},w_256{{ ',' + transforms if transforms }}/{{ siteURL }}/{{ imagesPath }}{{ imagePath}} 256w,
+            {{ cloudinaryURL }}/f_auto,q_{{ quality | d('auto:good') }},w_512{{ ',' + transforms if transforms }}/{{ siteURL }}/{{ imagesPath }}{{ imagePath}} 512w,
+            {{ cloudinaryURL }}/f_auto,q_{{ quality | d('auto:good') }},w_768{{ ',' + transforms if transforms }}/{{ siteURL }}/{{ imagesPath }}{{ imagePath}} 768w,
+            {{ cloudinaryURL }}/f_auto,q_{{ quality | d('auto:good') }},w_1024{{ ',' + transforms if transforms }}/{{ siteURL }}/{{ imagesPath }}{{ imagePath}} 1024w,
+            {{ cloudinaryURL }}/f_auto,q_{{ quality | d('auto:good') }},w_1280{{ ',' + transforms if transforms }}/{{ siteURL }}/{{ imagesPath }}{{ imagePath}} 1280w"
+    src="{{ cloudinaryURL }}/f_auto,q_{{ quality | d('auto:good') }},w_iw{{ ',' + transforms if transforms }}/{{ siteURL }}/{{ imagesPath }}{{ imagePath}}" alt="{{ alt | d ('') }}"
+    {%- if lazyload %} lazyload="true"{%- endif -%}
+    {%- if width %} width="{{ width }}"{%- endif -%}
+    {%- if height %} height="{{ height }}"{%- endif -%}
+    {% if classList %} class="{{ classList }}"{%- endif -%}>
+{% else %}
+<img src="{{ imgSRClocal }}" alt="{{ alt | d ('') }}" {% if lazyload %} lazyload="true"{% endif %}{% if width %} width="{{ width }}"{% endif %}{% if height %} height="{{ height }}"{% endif %}{% if classList %} class="{{ classList }}"{% endif %}>
+{% endif %}

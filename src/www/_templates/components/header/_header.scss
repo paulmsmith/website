@@ -32,6 +32,7 @@
       margin: 0;
       img {
         width: 100%;
+        height: auto;
         display: block;
         max-width: 120px;
         margin: 0 auto;
@@ -102,6 +103,7 @@
         width: 100%;
         display: block;
         max-width: 140px;
+        height: auto;
         margin: 0;
       }
       @include mq($from: large) {
