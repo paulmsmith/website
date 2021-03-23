@@ -1,6 +1,6 @@
-{% set cloudinaryURL = 'https://res.cloudinary.com/paulmsmith/image/fetch' %}
-{% set imagesPath = "assets/images/" %}
-{% set siteURL = 'https://paulsmith.site' %}
+{%- set cloudinaryURL = 'https://res.cloudinary.com/paulmsmith/image/fetch' -%}
+{%- set imagesPath = "assets/images/" -%}
+{%- set siteURL = 'https://paulsmith.site' -%}
 {% set imgSRC = (cloudinaryURL + '/' + transforms | d('w_iw,q_auto:good,f_auto') + '/' + siteURL + '/' + imagesPath + imagePath) %}
 {% set imgSRClocal = ('/' + imagesPath + imagePath) %}
 {% if (currentEnv != 'dev') %}

@@ -17,7 +17,11 @@ The following are some thoughts about why Agile Walls can be really valuable and
 
 Walking around a team’s work area is usually a good way to establish the status of a team and the work they’re doing.
 
-<img src="/assets/images/content/vital-signs.jpg" alt="">
+{% climage {
+  imagePath: 'content/vital-signs.jpg',
+  alt: 'Photograph of a health monitoring screen which is showing vital signs such as heart rate and oxygen level'
+  }
+%}
 
 Browsing a team’s wall-space should give you key information about the situation at hand in much the same way that a patient-chart and health monitor at the end the bed, can give a doctor or passer by the key information they need while a patient is sleeping.
 

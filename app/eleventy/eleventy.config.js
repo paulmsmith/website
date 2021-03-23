@@ -37,20 +37,64 @@ module.exports = eleventyConfig => {
     return util.inspect(value, { compact: false });
   });
 
-  eleventyConfig.addShortcode(
-    'cloudImage',
-    (path, alt = '', width, height, classList) => {
-      let URLPath = '';
-      if (config.currentEnv !== 'dev') {
-        URLPath = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/w_iw,q_auto:good,f_auto/https://paulsmith.site`;
-      }
-      return `<img src="${URLPath}${path}" alt="${alt || ''}" loading="lazy"${
-        width ? ` width="${width}"` : ''
-      }${height ? ` height="${height}"` : ''}${
-        classList ? ` class="${classList}"` : ''
-      }>`;
+  // eleventyConfig.addShortcode(
+  //   'cloudImage',
+  //   (path, alt = '', width, height, classList) => {
+  //     let URLPath = '';
+  //     if (config.currentEnv !== 'dev') {
+  //       URLPath = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/w_iw,q_auto:good,f_auto/https://paulsmith.site`;
+  //     }
+  //     return `<img src="${URLPath}${path}" alt="${alt || ''}" loading="lazy"${
+  //       width ? ` width="${width}"` : ''
+  //     }${height ? ` height="${height}"` : ''}${
+  //       classList ? ` class="${classList}"` : ''
+  //     }>`;
+  //   }
+  // );
+
+  eleventyConfig.addShortcode('climage', imageConfig => {
+    const siteURL = `https://paulsmith.site`;
+    const imagesPath = `assets/images/`;
+    const configObj = {
+      quality: 'auto:good',
+      ...imageConfig
+    };
+    const cloudinaryURL = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/w_iw,q_auto:good,f_auto/https://paulsmith.site`;
+    // eslint-disable-next-line no-console
+    console.log(imageConfig);
+    if (config.currentEnv !== 'dev') {
+      return `
+      <img sizes="(min-width: 30em) 28em, 100vw"
+      srcset="${cloudinaryURL}/f_auto,q_${configObj.quality},w_256${
+        configObj.transforms ? `,${configObj.transforms}` : ''
+      }/${siteURL}/${imagesPath}${configObj.imagePath} 256w,
+              ${cloudinaryURL}/f_auto,q_${configObj.quality},w_512${
+        configObj.transforms ? `,${configObj.transforms}` : ''
+      }/${siteURL}/${imagesPath}${configObj.imagePath} 512w,
+              ${cloudinaryURL}/f_auto,q_${configObj.quality},w_768${
+        configObj.transforms ? `,${configObj.transforms}` : ''
+      }/${siteURL}/${imagesPath}${configObj.imagePath} 768w,
+              ${cloudinaryURL}/f_auto,q_${configObj.quality},w_1024${
+        configObj.transforms ? `,${configObj.transforms}` : ''
+      }/${siteURL}/${imagesPath}${configObj.imagePath} 1024w,
+              ${cloudinaryURL}/f_auto,q_${configObj.quality},w_1280${
+        configObj.transforms ? `,${configObj.transforms}` : ''
+      }/${siteURL}/${imagesPath}${configObj.imagePath} 1280w"
+      src="${cloudinaryURL}/f_auto,q_${configObj.quality},w_iw${
+        configObj.transforms ? `,${configObj.transforms}` : ''
+      }/${siteURL}/${imagesPath}${configObj.imagePath}" alt="${
+        configObj.alt ? configObj.alt : ''
+      }"
+      ${configObj.lazyload ? `lazyload="true"` : ``}
+      ${configObj.width ? `width="${configObj.width}"` : ``}
+      ${configObj.height ? `height="${configObj.height}"` : ``}
+      ${configObj.classList ? `classList="${configObj.classList}"` : ``}
+      >`;
     }
-  );
+    return `<img src="/${imagesPath}${configObj.imagePath}" alt="${
+      configObj.alt ? configObj.alt : ''
+    }">`;
+  });
 
   eleventyConfig.addPairedShortcode('markdown', (content, inline = null) => {
     return inline
