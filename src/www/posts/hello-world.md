@@ -39,6 +39,8 @@ Timescales, budgets and limited resources help me to trade-off the things I shou
     alt: 'Photo of skeleton on a bench with the caption: Must have been waiting for a design to be perfect',
     width: '800',
     height: '400',
+    useCloud: true,
+    quality: '90',
     classes: 'u-1/1'
   }
 %}

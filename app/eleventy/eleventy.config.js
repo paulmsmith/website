@@ -43,7 +43,7 @@ module.exports = eleventyConfig => {
     const imagesPath = `assets/images/`;
 
     const configObj = {
-      quality: 'auto:good',
+      quality: '70',
       ...imageConfig
     };
 
@@ -53,11 +53,11 @@ module.exports = eleventyConfig => {
       configObj.height ? ` height="${configObj.height}"` : ``
     }${configObj.classes ? ` class="${configObj.classes}"` : ``}`;
 
-    const cloudinaryURL = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/w_iw,q_auto:good,f_auto/`;
+    const cloudinaryURL = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch`;
 
-    if (config.currentEnv !== 'dev') {
+    if (config.currentEnv !== 'dev' || configObj.useCloud) {
       // prettier-ignore
-      return `<img sizes="(min-width: 30em) 28em, 100vw"
+      return `<img sizes="(min-width: 720px) 980px, 100vw"
       srcset="${cloudinaryURL}/f_auto,q_${configObj.quality},w_256${configObj.transforms ? `,${configObj.transforms}` : ''}/${siteURL}/${imagesPath}${configObj.imagePath} 256w,
               ${cloudinaryURL}/f_auto,q_${configObj.quality},w_512${configObj.transforms ? `,${configObj.transforms}` : ''}/${siteURL}/${imagesPath}${configObj.imagePath} 512w,
               ${cloudinaryURL}/f_auto,q_${configObj.quality},w_768${configObj.transforms ? `,${configObj.transforms}` : ''}/${siteURL}/${imagesPath}${configObj.imagePath} 768w,
