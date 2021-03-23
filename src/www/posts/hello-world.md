@@ -34,7 +34,14 @@ Employers and stakeholders impose what designers like myself desperately need: c
 
 Timescales, budgets and limited resources help me to trade-off the things I should (and should not!) invest my time and effort in.
 
-<img src="/assets/images/content/skeleton-meme.jpg" alt="Photo of skeleton on a bench with the caption: Must have been waiting for a design to be perfect">
+{% imgr {
+    imagePath: 'content/skeleton-meme.jpg',
+    alt: 'Photo of skeleton on a bench with the caption: Must have been waiting for a design to be perfect',
+    width: '800',
+    height: '400',
+    classes: 'u-1/1'
+  }
+%}
 
 For personal projects that is not the case. I answer to nobody. The possibilities are limitless.
 

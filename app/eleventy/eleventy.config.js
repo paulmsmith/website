@@ -55,7 +55,7 @@ module.exports = eleventyConfig => {
 
     const cloudinaryURL = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/fetch/w_iw,q_auto:good,f_auto/`;
 
-    if (config.currentEnv === 'dev') {
+    if (config.currentEnv !== 'dev') {
       // prettier-ignore
       return `<img sizes="(min-width: 30em) 28em, 100vw"
       srcset="${cloudinaryURL}/f_auto,q_${configObj.quality},w_256${configObj.transforms ? `,${configObj.transforms}` : ''}/${siteURL}/${imagesPath}${configObj.imagePath} 256w,
