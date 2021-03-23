@@ -1,4 +1,3 @@
-{%- import "includes/render_component.njk" as component -%}
 <div class="c-header">
   <div class="o-constrain">
     <div class="c-header__wrap">
@@ -16,25 +15,20 @@
               <a href="/about/" class="c-navigation__link">About</a>
             </li>
             <li class="c-navigation__item">
-              <a href="/blog/" class="c-navigation__link">Writing</a>
+              <a href="/blog/" class="c-navigation__link">Archives</a>
             </li>
           </ul>
         </nav>
       </div>
       <!-- /.c-header__navigation -->
       <div class="c-header__masthead">
-        {{
-          component.render({
-            name: 'image',
-            fields: {
-              imagePath: 'masthead_paul_default.jpg',
-              alt: '',
-              width: '675',
-              height: '374',
-              classList: 'c-header__masthead-image'
-            }
-          })
-        }}
+        {% imgr {
+            imagePath: 'masthead_paul_default.jpg',
+            classes: 'c-header__masthead-image',
+            width: '337',
+            height: '187'
+          }
+        %}
       </div>
     </div>
     <!-- /.c-header__wrap -->

@@ -1,6 +1,6 @@
 ---
 title: 'Tips for your agile walls'
-date: 2021-02-21
+date: 2018-11-19
 tags: ['agile']
 ---
 

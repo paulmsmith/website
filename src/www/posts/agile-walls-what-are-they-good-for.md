@@ -1,6 +1,6 @@
 ---
 title: 'Agile walls what are they good for'
-date: 2021-02-21
+date: 2018-11-18
 tags: ['agile']
 original_url: 'https://medium.com/@paulmsmith/agile-walls-9313e49cbeac'
 ---
@@ -17,9 +17,10 @@ The following are some thoughts about why Agile Walls can be really valuable and
 
 Walking around a team’s work area is usually a good way to establish the status of a team and the work they’re doing.
 
-{% climage {
+{% imgr {
   imagePath: 'content/vital-signs.jpg',
-  alt: 'Photograph of a health monitoring screen which is showing vital signs such as heart rate and oxygen level'
+  alt: 'A health monitoring screen showing vital signs such as heart rate and oxygen level',
+  classes: 'u-1/1'
   }
 %}
 
@@ -42,7 +43,12 @@ Of course, there is no set way that teams should be using their workspace but as
 
 If you can’t answer those questions from a team’s physical space then I’d say that the walls are probably not working hard enough for them or their organisation.
 
-<img src="/assets/images/content/wall-photo.jpg" alt="">
+{% imgr {
+    imagePath: 'content/wall-photo.jpg',
+    alt: 'A physical wall with agile cards neatly aligned. Printed lables for sprint goals, backlog, doing, done and ready',
+    classes: 'u-1/1'
+  }
+%}
 
 Leisa made an excellent point in her post “[What walls are for](http://www.disambiguity.com/what-walls-are-for/)” when she said:
 
