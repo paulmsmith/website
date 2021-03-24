@@ -1,13 +1,17 @@
 body {
-  @include padding(0 0);
+  @include padding(0);
 }
 
-.l-post__body {
-
+.l-doc {
+  margin: 0;
 }
 
 .l-post__footer {
   @include margin(2em 0)
+}
+
+.l-doc-header {
+  margin-top: 0;
 }
 
 .l-divider--zig-to-the-zag {
@@ -18,16 +22,21 @@ body {
 }
 
 .main-skip-link {
-  margin: 0;
-  padding: .75em;
+  line-height: 1;
+  position: relative;
   @include font-size(1rem);
   &__link, &__link:link {
     line-height: 1;
     color: #fff;
     padding: 0.25em;
+    margin-bottom: 0.25em;
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid transparent;
     &:focus {
       background: get('colour.page.focus');
       color: #000;
+      border-bottom-color: #000;
     }
   }
 }
