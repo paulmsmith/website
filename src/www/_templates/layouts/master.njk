@@ -1,11 +1,13 @@
 {%- import "includes/macros.njk" as macros -%}
 {%- import "includes/render_component.njk" as component -%}
+{% set meta_description = social_description | d('The website of Paul Smith, a designer in the UK Government') %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | d('en-GB') }}" dir="{{ page.dir | d('ltr') }}">
 <head>
   <!-- UA configuration -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ meta_description }}"
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% block title %}{{ title | d('title not set') }}{% endblock %}</title>
   {%- block metatags -%}
@@ -23,7 +25,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Paul Smith" />
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" name="description" content="{{ meta.description | d('The website of Paul Smith, a designer in the UK Government') }}">
+  <meta property="og:description" name="description" content="{{ meta_description }}">
   <meta property="og:url" content="{{ page.url }}">
   <meta property="og:url" content="https://paulsmith.site" />
   <meta property="og:image" content="https://paulsmith.site/assets/images/{{ social_image | d('meta/og_image.jpg' )}}" />
@@ -31,7 +33,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="paulmsmith">
   <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:description" content="{{ meta.description | d('The website of Paul Smith, a designer in the UK Government') }}" />
+  <meta name="twitter:description" content="{{ meta_description }}" />
   <meta name="twitter:image:alt" content="Paul Smith's profile picture.">
   {%- endblock -%}
   {%- block stylsheets -%}
@@ -41,7 +43,7 @@
 </head>
 <body>
   {%- block after_opening_body -%}{%- endblock -%}
-  <div class="main-skip-link">
+  <div class="main-skip-link u-constrain">
     <a href="#doc-content" class="main-skip-link__link">Skip to main content</a>
   </div>
   <div class="l-doc">

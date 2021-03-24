@@ -4,6 +4,7 @@ date: 2019-09-27
 tags: ['design','medium']
 original_url: 'https://medium.com/doing-service-design-at-the-national-lottery/prototyping-at-nlhf-705ff3b88c67'
 social_image: 'content/nlhf_prototyping_pens.jpeg'
+social_description: 'A blog post about “how we design” at the National Lottery Heritage Fund'
 ---
 
 # Prototyping at NLHF

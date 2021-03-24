@@ -20,7 +20,6 @@ body {
 .main-skip-link {
   margin: 0;
   padding: .75em;
-  text-align: center;
   @include font-size(1rem);
   &__link, &__link:link {
     line-height: 1;
