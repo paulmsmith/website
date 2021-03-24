@@ -1,7 +1,8 @@
 ---
 title: 'Hello world'
-date: 2021-01-01
+date: 2021-03-24
 tags: ['blogging']
+social_description: 'A hello from me on my freshly revived blog'
 ---
 
 # Hello world
@@ -49,7 +50,7 @@ For personal projects that is not the case. I answer to nobody. The possibilitie
 
 So mindful of my perfectionistic demons, I have resolved to just get this thing out there.
 
-People will never see my work if I need to be satisfied with it, I've come to accept that will never happen on personal projects.
+People will never see my work if I need to be satisfied with it, I've come to accept that won't ever happen on personal projects.
 
 I have a list of things I'd like to do to iterate the version I publish today, which looks like:
 
