@@ -26,13 +26,13 @@
   <meta property="og:description" name="description" content="{{ meta.description | d('The website of Paul Smith, a designer in the UK Government') }}">
   <meta property="og:url" content="{{ page.url }}">
   <meta property="og:url" content="https://paulsmith.site" />
-  <meta property="og:image" content="https://paulsmith.site/assets/images/{{ social_image | d('meta/og_image.jpg' )}}" />
+  <meta property="og:image" content="https://paulsmith.site/assets/images/{{ social_image | d('meta/og_image.png' )}}" />
   <!-- twitter card meta -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="paulmsmith">
   <meta name="twitter:title" content="{{ title }}" />
   <meta name="twitter:description" content="" />
-  <meta name="twitter:image:src" content="https://paulsmith.site/assets/images/{{ social_image | d('meta/twitter_image.jpg' )}}">
+  <meta name="twitter:image:src" content="https://paulsmith.site/assets/images/{{ social_image | d('meta/twitter_image.png' )}}">
   <meta name="twitter:image:alt" content="Paul Smith's profile picture.">
   {%- endblock -%}
   {%- block stylsheets -%}
@@ -42,8 +42,11 @@
 </head>
 <body>
   {%- block after_opening_body -%}{%- endblock -%}
+  <div class="main-skip-link">
+    <a href="#doc-content" class="main-skip-link__link">Skip to main content</a>
+  </div>
   <div class="l-doc">
-    <header class="l-doc-header" role="banner">
+    <header class="l-doc-header" role="banner" id="doc-header">
         {{
           component.render({
             name: 'header',
@@ -55,11 +58,11 @@
         }}
     </header>
     <!-- /.l-doc-header -->
-    <main class="l-doc-content">
+    <main class="l-doc-content" id="doc-content">
         {% block content %}{% endblock %}
     </main>
     <!-- /.l-doc-content -->
-    <footer class="l-doc-footer">
+    <footer class="l-doc-footer" id="doc-footer">
         {{
           component.render({
             name: 'footer',

@@ -3,6 +3,7 @@ title: 'Design Systems — the means, not the end'
 tags: ['design systems']
 original_url: 'https://medium.com/@paulmsmith/design-systems-the-means-not-the-end-fc840c21b51e'
 social_image: 'content/picnmix.jpg'
+date: 2018-10-22
 ---
 
 # Design Systems — the means, not the end
@@ -32,7 +33,7 @@ I too have seen what Simon described but I’d also argue that perhaps we (the p
 Is it the result of how design systems have been positioned or ‘sold’ to their audience?
 
 {% imgr {
-  imagePath: 'content/picnmix.jpg',
+  imagePath: social_image,
   width: '1250',
   height: '703',
   classes: 'u-1/1',

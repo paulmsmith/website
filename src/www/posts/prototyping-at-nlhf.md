@@ -3,6 +3,7 @@ title: 'Prototyping at the Heritage Fund'
 date: 2019-09-27
 tags: ['design','medium']
 original_url: 'https://medium.com/doing-service-design-at-the-national-lottery/prototyping-at-nlhf-705ff3b88c67'
+social_image: 'content/nlhf_prototyping_pens.jpeg'
 ---
 
 # Prototyping at NLHF
@@ -99,7 +100,7 @@ We analysed the existing live application form as a team. We invited members of 
 Inspired by [Ben Terrett’s GOV.UK Sketching templates](https://designnotes.blog.gov.uk/2014/05/22/gov-uk-sketching-templates/), I created some sketch sheets for our team.
 
 {% imgr {
-  imagePath: 'content/nlhf_prototyping_pens.jpeg',
+  imagePath: social_image,
   alt: 'Photo from above of a sketch sheet and sketching pens'
 } %}
 

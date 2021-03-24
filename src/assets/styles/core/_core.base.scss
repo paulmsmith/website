@@ -27,7 +27,7 @@ a:link {
 }
 
 :focus {
-  color: inherit;
+  color: #000;
   background-color: get('colour.page.focus');
   border-bottom: 4px solid get('colour.page.border');
   outline: 0;
