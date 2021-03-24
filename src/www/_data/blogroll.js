@@ -30,5 +30,25 @@ module.exports = [
   {
     text: 'Stephen McCarthy',
     url: 'http://loft27design.com/writing.html'
+  },
+  {
+    text: 'Zoe Gould',
+    url: 'https://www.zoeonthego.org/'
+  },
+  {
+    text: 'Eleanor Mollett',
+    url: 'https://eleanormollett.com/'
+  },
+  {
+    text: 'Sara Soueidan',
+    url: 'https://www.sarasoueidan.com/blog/'
+  },
+  {
+    text: 'Amy Hupe',
+    url: 'https://amyhupe.co.uk/'
+  },
+  {
+    text: 'Andrew Duckworth',
+    url: 'https://grillopress.github.io/'
   }
 ];

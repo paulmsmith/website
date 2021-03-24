@@ -146,6 +146,7 @@ module.exports = function nunjucksFilters(nunj) {
   filters.kebabCase = _.kebabCase;
   filters.escapeHTML = _.escape;
   filters.unescapeHTML = _.unescape;
+  filters.sortBy = _.sortBy;
 
   return filters;
 };

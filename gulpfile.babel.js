@@ -156,7 +156,7 @@ function watch() {
   const watchers = [
     {
       glob: config.paths.templates.src.map(
-        element => `${element}/**/{*.html,*.njk,*.md}`
+        element => `${element}/**/{*.html,*.njk,*.md,*.js}`
       ),
       tasks: ['build:templates']
     },
