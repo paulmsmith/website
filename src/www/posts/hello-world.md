@@ -52,12 +52,14 @@ So mindful of my perfectionistic demons, I have resolved to just get this thing 
 
 People will never see my work if I need to be satisfied with it, I've come to accept that won't ever happen on personal projects.
 
-I have a list of things I'd like to do to iterate the version I publish today, which looks like:
+I have a list of things I'd like to do to iterate the version I publish today, some highlights are:
 
 - Work on performance optimisation. I have not done anything specifc on this yet.
 - Rejig mark-up and run through more than just basic accessibility checks.
-- Add better links and organisation for content. Next/Back that sort of thing.
-- Automatically handle images, perhaps with this [11ty image plugin](https://www.11ty.dev/docs/plugins/image/).
+- Generate tag archives
+- Make the reading experience better
+- Implement a dark mode (or something to help people who struggle with bright/white web sites)
+- Add RSS/JSON feeds
 
 You can't provide any value until you deliver something. If it's good enough today, that is much better than perfect never.
 
