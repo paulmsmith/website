@@ -1,7 +1,7 @@
 ---
 title: 'Agile walls what are they good for'
 date: 2018-11-18
-tags: ['agile']
+tags: ['agile','medium']
 original_url: 'https://medium.com/@paulmsmith/agile-walls-9313e49cbeac'
 ---
 

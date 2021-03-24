@@ -26,7 +26,7 @@
       in:
       <ul class="c-meta__tags">
         {% for tag in currentPost.data.tags %}
-          <li>{{ tag | title }}</li>
+          <li class="c-meta__tags__item c-meta__tags__item--alt"><span aria-hidden="true">#</span>{{ tag | title }}{% if not loop.last %}<span class="u-visually-hidden">,</span>{% endif %}</li>
         {% endfor %}
       </ul>
       {% endif %}

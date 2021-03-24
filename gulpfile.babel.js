@@ -165,7 +165,8 @@ function watch() {
       tasks: ['compile:stylesheets']
     },
     {
-      glob: `${config.paths.images.src}**/*`,
+      // glob: `${config.paths.images.src}**/*`,
+      glob: config.paths.images.src.map(element => `${element}/**/*`),
       tasks: ['optimise:images']
     },
     {
