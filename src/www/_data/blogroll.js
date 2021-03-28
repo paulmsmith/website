@@ -12,6 +12,10 @@ module.exports = [
     url: 'https://www.benjystanton.co.uk/'
   },
   {
+    text: 'Chris Thomas',
+    url: 'https://www.thomaschris.co.uk/'
+  },
+  {
     text: 'Colin Oakley',
     url: 'https://words.htmlandbacon.com/'
   },
