@@ -40,3 +40,12 @@ body {
     }
   }
 }
+
+.content-image {
+  width: 100%;
+  height: auto;
+  @include margin(1.5em 0);
+  &--border {
+    border: 2px solid #000;
+  }
+}
