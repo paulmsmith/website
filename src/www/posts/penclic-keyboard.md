@@ -125,7 +125,9 @@ I think it looks great but the key benefits for me are how this has been ergonom
 
 ---
 
-So far, so very good indeed. If you're in the UK and would like one of these, I got mine from the UK distributor "[posturite.co.uk](https://www.posturite.co.uk/penclic-mini-keyboard-kb3-bluetooth-black)" and although their site stated a lead time of 1 week, it actually came the next day.
+So far, so very good indeed. I think of it as a cross between an Apple Magic Keyboard and a mechanical keyboard with some additional features that neither of those commonly have.
+
+If you're in the UK and would like one of these, I got mine from the UK distributor "[posturite.co.uk](https://www.posturite.co.uk/penclic-mini-keyboard-kb3-bluetooth-black)" and although their site stated a lead time of 1 week, it actually came the next day.
 
 ## Further reading
 
