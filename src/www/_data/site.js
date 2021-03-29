@@ -5,5 +5,7 @@ module.exports = {
         title: ''
       }
     }
-  }
+  },
+  name: 'Paul Smith',
+  url: 'https://paulsmith.site'
 };
