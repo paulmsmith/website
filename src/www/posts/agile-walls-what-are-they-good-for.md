@@ -1,11 +1,9 @@
 ---
-title: 'Agile walls what are they good for'
+title: 'Agile walls what are they good for?'
 date: 2018-11-18
 tags: ['agile','medium']
 original_url: 'https://medium.com/@paulmsmith/agile-walls-9313e49cbeac'
 ---
-
-# {{ title }}?
 
 I have been working within agile delivery teams for quite a few years now and have often been nominated, asked or took it upon myself to help my teams establish their ‘physical wall-space’.
 

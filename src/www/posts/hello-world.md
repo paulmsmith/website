@@ -3,9 +3,8 @@ title: 'Hello world'
 date: 2021-03-24
 tags: ['blogging']
 social_description: 'A hello from me on my freshly revived blog'
+heading: 'Hello world'
 ---
-
-# Hello world
 
 The words 'Hello world' are often the first thing many programmers will instruct their applications to produce.
 

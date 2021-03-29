@@ -3,10 +3,11 @@ title: 'The perfect keyboard?'
 date: '2021-03-27'
 social_image: 'content/penclic-keyboard-closeup.jpeg'
 social_description: 'Have I found my perfect keyboard? A review.'
+heading: 'The perfect keyboard?'
 tags: ['hardware','review']
 ---
 
-# {{ title }}
+As I write this, I have owned the [Penclic KB3 Mini Wireless Keyboard](https://penclic.se/product/mini-wireless-keyboard-kb3-black/) for a mere 2 hours but already I think this might just be the keyboard I have been searching for most of my working life.
 
 {% imgr {
   imagePath: 'content/penclic-keyboard-closeup.jpeg',
@@ -14,8 +15,6 @@ tags: ['hardware','review']
   lazyload: true,
   classes: 'content-image content-image--border'
 } %}
-
-As I write this, I have owned the [Penclic KB3 Mini Wireless Keyboard](https://penclic.se/product/mini-wireless-keyboard-kb3-black/) for a mere 2 hours but already I think this might just be the keyboard I have been searching for most of my working life.
 
 ## Keyboards and me
 

@@ -6,8 +6,6 @@ social_image: 'content/picnmix.jpg'
 date: 2018-10-22
 ---
 
-# Design Systems — the means, not the end
-
 Reusable patterns work a treat, except when they don’t.
 
 ---

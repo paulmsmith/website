@@ -2,6 +2,11 @@
 {% block content %}
 <div class="o-constrain">
   <div class="o-layout">
+    {% if (title or heading) and not supressHeading %}
+      <div class="o-layout__item u-1/1@large">
+        <h1 class="c-page-heading">{{ heading | d(title) }}</h1>
+      </div>
+    {% endif %}
     <div class="o-layout__item u-2/3@large">
         {% block primarycontent %}{% endblock %}
     </div>

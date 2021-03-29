@@ -4,8 +4,6 @@ date: 2018-11-19
 tags: ['agile']
 ---
 
-# {{ title }}
-
 If you have not yet read [Agile walls, what are they good for?](../agile-walls-what-are-they-good-for/) that might be worth your time before reading this post.
 
 Otherwise dive into some tips for agile walls.

@@ -7,8 +7,6 @@ social_image: 'content/nlhf_prototyping_pens.jpeg'
 social_description: 'A blog post about “how we design” at the National Lottery Heritage Fund'
 ---
 
-# Prototyping at NLHF
-
 This is the first in a series of blog posts about “how we design” at the [National Lottery Heritage Fund](https://heritagefund.org.uk/).
 
 At the time of writing (September 2019) we are moving from a broad discovery phase of work to an ‘Alpha’ phase for our primary service which enables people to “Get funding for a heritage project”.
