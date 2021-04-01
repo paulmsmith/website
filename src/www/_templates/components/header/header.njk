@@ -8,19 +8,20 @@
           </a>
         </{{ 'h1' if isHomepage else 'div' }}>
       {% endif %}
+      {% if navigation %}
       <div class="c-header__navigation">
         <nav class="c-navigation" role="navigation">
           <ul class="c-navigation__list">
-            <li class="c-navigation__item">
-              <a href="/about/" class="c-navigation__link">About</a>
-            </li>
-            <li class="c-navigation__item">
-              <a href="/blog/" class="c-navigation__link">Archives</a>
-            </li>
+            {% for item in navigation %}
+              <li class="c-navigation__item">
+                <a href="{{ item.url | d ('#') }}" class="c-navigation__link">{{ item.text }}</a>
+              </li>
+            {% endfor %}
           </ul>
         </nav>
       </div>
       <!-- /.c-header__navigation -->
+      {% endif %}
       <div class="c-header__masthead">
         <a href="/">
           {% imgr {
