@@ -1,9 +1,10 @@
 ---
-title: 'The perfect keyboard?'
+title: 'Penclic KB3 Mini Wireless Keyboard'
 date: '2021-03-27'
 social_image: 'content/penclic-keyboard-closeup.jpeg'
 social_description: 'Have I found my perfect keyboard? A review.'
-heading: 'The perfect keyboard?'
+heading: 'Penclic KB3 Mini Wireless Keyboard'
+subheading: 'Have I found the perfect keyboard?'
 tags: ['hardware','review']
 ---
 

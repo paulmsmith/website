@@ -140,4 +140,15 @@ body {
   color: #000;
   font-weight: 550;
   @include font-size(54px);
+  &--with-subheading {
+    @include margin(3rem 0 0.3rem);
+  }
+}
+
+.c-page-subheading {
+  @include margin(0 0 2rem);
+  line-height: 1.1;
+  color: #666;
+  font-weight: normal;
+  @include font-size(38px);
 }

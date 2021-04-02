@@ -20,6 +20,10 @@ module.exports = [
     url: 'https://words.htmlandbacon.com/'
   },
   {
+    text: 'Craig Abbott',
+    url: 'http://www.craigabbott.co.uk/blog/'
+  },
+  {
     text: 'Lou Downe',
     url: 'https://blog.louisedowne.com/'
   },
