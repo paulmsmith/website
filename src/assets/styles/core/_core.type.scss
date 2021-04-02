@@ -124,6 +124,21 @@ body {
     display: block;
   }
 
+  img[width] {
+    width: auto; /* Defer to max-width */
+  }
+
+  img[width][height] {
+    height: auto; /* Preserve aspect ratio */
+  }
+
+  /* Let SVG scale without boundaries */
+  img[src$=".svg"] {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+
   hr {
     @extend %l-divider;
     background: transparent url(/assets/images/diamond_divider.svg) no-repeat 50% 50%;
