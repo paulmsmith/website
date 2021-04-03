@@ -1,0 +1,38 @@
+.c-sectionhead {
+  &--block {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.c-sectionhead--weeknote {
+  * { margin: 0; }
+  position: relative;
+  @include padding(1.5em 0);
+  text-align: center;
+  @include margin-bottom(1em);
+  border-bottom: 5px solid #000;
+  .c-sectionhead__heading-1 {
+    margin-bottom: .35em;
+  }
+  .c-sectionhead__strapline {
+    font-size: 0.7em;
+    color: #666;
+    font-weight: normal;
+    font-family: 'font-b';
+  }
+  .c-sectionhead__note {
+    @include font-size(1.4rem);
+    font-family: 'Dank mono', 'Incosolata', monospace;
+    font-weight: bold;
+    display: inline-block;
+    @include mq($from: large) {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+    }
+  }
+  abbr {
+    text-decoration: none;
+  }
+}

@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ meta_description }}">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{% block title %}{{ title | d('title not set') }}{% endblock %}</title>
+  <title>{% block title %}{{ title | d('title not set') | safe }}{% endblock %}</title>
   {%- block metatags -%}
   {%- if (currentEnv == 'production') and (isHomepage) -%}
   <link rel="canonical" href="https://paulsmith.site/">

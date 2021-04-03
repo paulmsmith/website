@@ -26,6 +26,14 @@ module.exports = function nunjucksFilters(nunj) {
     return nunjucksSafe(`<script>console.log(${output});</script>`);
   };
 
+  filters.padStart = function padStart(s, size) {
+    let str = s;
+    while (str.length < (size || 2)) {
+      str = `0${str}`;
+    }
+    return str;
+  };
+
   /* eslint-disable */
   /**
    * deep merge that supports concating arrays & strings.

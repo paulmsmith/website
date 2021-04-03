@@ -80,6 +80,12 @@ module.exports = eleventyConfig => {
     return [...collection.getFilteredByGlob('./src/www/posts/*.md')].reverse();
   });
 
+  eleventyConfig.addCollection('weeknote', collection => {
+    return [
+      ...collection.getFilteredByGlob('./src/www/weeknotes/*.md')
+    ].reverse();
+  });
+
   return {
     dir: {
       // where are the files eleventy is to process

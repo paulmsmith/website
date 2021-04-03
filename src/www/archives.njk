@@ -12,11 +12,24 @@ changeFreq: 'weekly'
   </div>
   <!-- /.prose -->
 
+  <h2>Writing</h2>
+
   <ul class="list list--entries">
   {%- for item in collections.post -%}
     <li class="list__item">
       <time>{{ item.date | readableDate }}</time>
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
+      <a href="{{ item.url }}">{{ item.data.title | safe }}</a>
+    </li>
+  {%- endfor -%}
+  </ul>
+
+  <h2>Weeknotes</h2>
+
+  <ul class="list list--entries">
+  {%- for item in collections.weeknote -%}
+    <li class="list__item">
+      <time>{{ item.date | readableDate }}</time>
+      <a href="{{ item.url }}">{{ item.data.title | safe }}</a>
     </li>
   {%- endfor -%}
   </ul>
