@@ -8,6 +8,10 @@ module.exports = [
     url: 'http://benholliday.com/'
   },
   {
+    text: 'Giles Turnbull',
+    url: 'https://gilest.org/'
+  },
+  {
     text: 'Benjy Stanton',
     url: 'https://www.benjystanton.co.uk/'
   },

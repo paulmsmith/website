@@ -10,6 +10,10 @@
   <meta name="description" content="{{ meta_description }}">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% block title %}{{ title | d('title not set') | safe }}{% endblock %}</title>
+  <link rel="preload" href="/assets/fonts/font-b-book.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/assets/fonts/font-b-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/assets/fonts/SuisseIntl-Medium.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/assets/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   {%- block metatags -%}
   {%- if (currentEnv == 'production') and (isHomepage) -%}
   <link rel="canonical" href="https://paulsmith.site/">

@@ -1,6 +1,6 @@
 const { DateTime } = require('luxon');
 const _ = require('lodash');
-const stringify = require('javascript-stringify').stringify;
+const { stringify } = require('javascript-stringify');
 
 module.exports = function nunjucksFilters(nunj) {
   // if you need accss to the internal nunjucks filter you can just env

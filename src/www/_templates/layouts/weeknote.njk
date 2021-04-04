@@ -1,3 +1,6 @@
+{% set heading = title %}
+{% set title = title + ' Weeknotes' %}
+
 {% extends "./post.njk" %}
 
 {% block sectionhead %}
@@ -6,7 +9,7 @@
     <div class="c-sectionhead__strapline">
       <span aria-hidden="true">~</span> Weeknotes <span aria-hidden="true">~</span>&nbsp;
     </div>
-    {{ title | safe }}
+    {{ heading | d(title) | safe }}
   </h1>
   <p class="c-sectionhead__note"><abbr title="Season {{ weeknote.season }}, Episode {{ weeknote.episode }}">S{{ weeknote.season | padStart(2) }}E{{ weeknote.episode | padStart(2) }}</abbr></p>
 </div>

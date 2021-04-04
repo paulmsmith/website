@@ -1,0 +1,15 @@
+.prose--weeknote {
+  ul {
+    padding: 0 1em;
+    list-style-type: square;
+    li:not(:first-child) {
+      margin-top: 1.75em;
+    }
+  }
+  h2 {
+    @include margin(1.5em 0 1em 1rem);
+    &:first-child {
+      @include margin-top(0.5em);
+    }
+  }
+}

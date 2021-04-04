@@ -5,7 +5,7 @@
 {% block primarycontent %}
 
   <div class="l-post__body">
-    <div class="prose">
+    <div class="prose {%- if weeknote %} prose--weeknote{% endif %}">
       {{ content | safe }}
     </div>
   </div>
