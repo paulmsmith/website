@@ -8,15 +8,16 @@
 .c-sectionhead--weeknote {
   * { margin: 0; }
   position: relative;
-  @include padding(1.5em 0);
   text-align: center;
-  @include margin-bottom(1em);
   border-bottom: 5px solid #000;
+  @include padding(1.5em 0);
+  @include margin-bottom(1em);
   .c-sectionhead__heading-1 {
     margin-bottom: .35em;
+    @include font-size(45px);
   }
   .c-sectionhead__strapline {
-    font-size: 0.7em;
+    @include font-size(0.7em);
     color: #666;
     font-weight: normal;
     font-family: 'font-b';
