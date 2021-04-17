@@ -1,5 +1,6 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const util = require('util');
+const { stringify } = require('javascript-stringify');
 const markdownIt = require('markdown-it')({
   html: true,
   linkify: false,
@@ -34,7 +35,14 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('post', 'post.njk');
 
   eleventyConfig.addFilter('debug', function debug(value) {
-    return util.inspect(value, { compact: false });
+    return util.inspect(value, {
+      compact: false
+    });
+  });
+
+  eleventyConfig.addFilter('console', function console(value) {
+    const output = stringify(value, null, '\t');
+    return `<script>console.log(${output});</script>`;
   });
 
   eleventyConfig.addShortcode('imgr', imageConfig => {
@@ -84,6 +92,16 @@ module.exports = eleventyConfig => {
     return [
       ...collection.getFilteredByGlob('./src/www/weeknotes/*.md')
     ].reverse();
+  });
+
+  // Filter source file names using a glob
+  eleventyConfig.addCollection('writings', function addCollection(
+    collectionApi
+  ) {
+    // Also accepts an array of globs!
+    return collectionApi.getFilteredByGlob([
+      './src/www/{posts,weeknotes}/*.md'
+    ]);
   });
 
   return {

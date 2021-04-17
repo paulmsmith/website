@@ -1,11 +1,10 @@
 const { DateTime } = require('luxon');
 const _ = require('lodash');
-const { stringify } = require('javascript-stringify');
 
 module.exports = function nunjucksFilters(nunj) {
   // if you need accss to the internal nunjucks filter you can just env
   // see the example below for 'safe' which is used in 'filters.log'
-  const nunjucksSafe = nunj.getFilter('safe');
+  // const nunjucksSafe = nunj.getFilter('safe');
 
   /**
    * object used store the methods registered as a 'filter' (of the same name) within nunjucks
@@ -21,10 +20,10 @@ module.exports = function nunjucksFilters(nunj) {
    * @example {{ "hello world" | console }}
    * @example {{ "hello world" | console | safe }}  [for environments with autoescaping turned on]
    */
-  filters.console = function console(value) {
-    const output = stringify(value, null, '\t', { maxDepth: 3 });
-    return nunjucksSafe(`<script>console.log(${output});</script>`);
-  };
+  // filters.console = function console(value) {
+  //   const output = stringify(value, null, '\t', { maxDepth: 3 });
+  //   return nunjucksSafe(`<script>console.log(${output});</script>`);
+  // };
 
   filters.padStart = function padStart(s, size) {
     let str = s;
