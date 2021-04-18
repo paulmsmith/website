@@ -41,7 +41,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter('console', function console(value) {
-    const output = stringify(value, null, '\t');
+    const output = stringify(value, null, '\t', { maxDepth: 3 });
     return `<script>console.log(${output});</script>`;
   });
 
