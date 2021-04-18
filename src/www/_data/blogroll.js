@@ -12,6 +12,10 @@ module.exports = [
     url: 'https://gilest.org/'
   },
   {
+    text: 'Jacob Kaplan-Moss',
+    url: 'https://jacobian.org/'
+  },
+  {
     text: 'Benjy Stanton',
     url: 'https://www.benjystanton.co.uk/'
   },
