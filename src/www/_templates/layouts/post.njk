@@ -8,8 +8,6 @@
 
 {% block primarycontent %}
 
-{{ currentPost | debug | console | safe}}
-
   <div class="l-post__body">
     <div class="prose {%- if weeknote %} prose--weeknote{% endif %}">
       {{ content | safe }}
