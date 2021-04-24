@@ -5,7 +5,7 @@ isHomepage: true
 supressHeading: true
 changeFreq: 'weekly'
 ---
-{% extends "./_templates/layouts/blog.njk" %}
+{% extends "./_templates/layouts/full.njk" %}
 {% block primarycontent %}
 
   <div class="prose">
@@ -14,19 +14,44 @@ changeFreq: 'weekly'
     </div>
   </div>
 
-  <div class="prose">
-    <h2>Writings and notes</h2>
-  </div>
-  <!-- /.prose -->
+  <div class="o-layout o-layout--huge u-!-margin-bottom-1">
+    <div class="o-layout__item u-1/2@medium">
 
-  <ul class="list list--entries">
-  {%- for item in collections.post -%}
-    <li class="list__item">
-      <time>{{ item.date | readableDate }}</time>
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
-    </li>
-  {%- endfor -%}
-  </ul>
+      <div class="prose">
+        <h2 class="u-!-margin-top-1">Writing</h2>
+      </div>
+      <!-- /.prose -->
+
+      <ul class="list list--entries">
+      {%- for item in collections.post -%}
+        <li class="list__item">
+          <time>{{ item.date | readableDate }}</time>
+          <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </li>
+      {%- endfor -%}
+      </ul>
+
+    </div>
+
+    <div class="o-layout__item u-1/2@medium">
+
+      <div class="prose">
+        <h2 class="u-!-margin-top-1">Weeknotes</h2>
+      </div>
+      <!-- /.prose -->
+
+      <ul class="list list--entries">
+      {%- for item in collections.weeknote -%}
+        <li class="list__item">
+          <time>{{ item.date | readableDate }}</time>
+          {{ item.data | debug | console | safe }}
+          <a href="{{ item.url }}">Episode {{ item.data.weeknote.episode | safe }}</a>
+        </li>
+      {%- endfor -%}
+      </ul>
+
+    </div>
+  </div>
 
 {% endblock %}
 
