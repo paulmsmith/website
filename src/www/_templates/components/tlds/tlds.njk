@@ -1,0 +1,38 @@
+{% macro tlds_item(item) %}
+  <div class="c-tlds-item">
+    <h4 class="c-tlds-item__title">
+      {% if item.date %}
+        <div class="date-span">
+          <span class="date-span__from">{{ item.date.from }}</span><span class="date-span__divide"><span aria-hidden="true">&mdash;</span><span class="u-visually-hidden"> until </span></span><span class="date-span__until">{{ item.date.until }}</span>
+        </div>
+      {% else %}
+        {{ item.title }}
+      {% endif %}
+    </h4>
+    <div class="c-tlds-item__content">
+      <h3 class="c-tlds-item__subtitle">
+        {% if item.subtitle.url %}
+          <a href="{{ item.subtitle.url }}">
+            {{ item.subtitle.text }}
+          </a>
+        {% else %}
+            {{ item.subtitle.text }}
+        {% endif %}
+      </h3>
+      {% if item.content %}
+        {% for content in item.content %}
+          <p>{{ content | safe  }}</p>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <!-- / .c-tlds__content -->
+  </div>
+  <!-- / .c-tlds-item -->
+{% endmacro %}
+
+<div class="c-tlds{% if classnames %} {% for class in classnmaes %}{{ class }} {% endfor %}{% endif %}">
+ {% for item in items %}
+   {{ tlds_item(item) }}
+ {% endfor %}
+</div>
+<!-- /.c-tlds c-tlds--chronological -->

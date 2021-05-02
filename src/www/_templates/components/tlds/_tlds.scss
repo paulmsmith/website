@@ -1,0 +1,54 @@
+.c-tlds {
+  p {
+    font-family: 'font-b';
+  }
+  @include padding(0.5em 0 0.5em 0);
+}
+
+.c-tlds-item {
+  &__content {
+    margin: 0;
+  }
+  &__title,
+  &__subtitle {
+    font-family: 'font-a';
+    margin: 0;
+  }
+}
+
+@include mq($from: medium) {
+  .c-tlds-item {
+    display: flex;
+    // flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: stretch;
+    &__content {
+      flex-grow: 2;
+      width: 70%;
+    }
+    &__title {
+      flex-grow: 1;
+      width: 25%;
+    }
+    &__title,
+    &__subtitle {
+      margin: 0;
+    }
+    &__title {
+      @include font-size(1.6rem);
+    }
+  }
+  .date-span {
+    > span {
+      margin: 0;
+    }
+    &__divide {
+      font-size: 0.8em;
+      color: #666;
+    }
+    &__from {
+      // display: block;
+    }
+  }
+}
