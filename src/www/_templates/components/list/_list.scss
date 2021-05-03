@@ -1,6 +1,6 @@
 .list {
   > li {
-    @include margin(0 0 .25em 0);
+    @include margin(0 0 0.25em 0);
   }
 }
 
@@ -8,27 +8,27 @@
   list-style-type: none;
   padding: 0;
   > li {
-    @include margin(0 0 .25em 0);
+    @include margin(0 0 0.25em 0);
   }
 }
 
 .list--links-tout {
   > li {
-    @include padding(.25em 0);
+    @include padding(0.25em 0);
     border-bottom: 1px dotted #000;
   }
   > li > a {
-    padding: .15em 0;
+    padding: 0.15em 0;
   }
 }
 
 .list--links-aside {
   > li {
-    @include padding(.2em 0);
+    @include padding(0.2em 0);
     @include font-size(1.2rem);
   }
   > li > a {
-    padding: .15em 0;
+    padding: 0.15em 0;
   }
 }
 
@@ -36,6 +36,7 @@
   list-style-type: none;
   padding: 0;
   .list__item {
+    @include font-size(1.35rem);
     @include padding-bottom(1.5rem);
     &:not(:last-child) {
       @include margin-bottom(1.5rem);
@@ -48,11 +49,10 @@
       @include font-size(0.7em);
       color: #666;
       display: block;
-      @include margin-bottom(.25rem);
+      @include margin-bottom(0.25rem);
     }
     > * {
       margin: 0;
-      // flex: auto;
     }
     @include mq($from: medium) {
       line-height: 1.2;
@@ -65,9 +65,8 @@
       }
       time {
         min-width: 25%;
-      text-align: right;
+        text-align: right;
       }
     }
-
   }
 }
