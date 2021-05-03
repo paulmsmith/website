@@ -8,11 +8,11 @@ changeFreq: 'weekly'
 {% block primarycontent %}
 
   <div class="prose">
-    <p class=" u-!-margin-bottom-1">Some of my content has been republished here from other platforms such as medium, original publications are referenced.</p>
-  </div>
-  <!-- /.prose -->
+    <p class=" u-!-margin-bottom-2">Some of my content has been republished here from other platforms such as medium, original publications are referenced.</p>
 
   <h2>Writing</h2>
+
+  <p>Long-form articles and blog posts about a specific subject</p>
 
   <ul class="list list--entries">
   {%- for item in collections.post -%}
@@ -25,6 +25,8 @@ changeFreq: 'weekly'
 
   <h2>Weeknotes</h2>
 
+  <p>Weekly break down of things I have been doing, reading, thinking, watching.</p>
+
   <ul class="list list--entries">
   {%- for item in collections.weeknote -%}
     <li class="list__item">
@@ -33,6 +35,9 @@ changeFreq: 'weekly'
     </li>
   {%- endfor -%}
   </ul>
+
+  </div>
+  <!-- /.prose -->
 
 {% endblock %}
 

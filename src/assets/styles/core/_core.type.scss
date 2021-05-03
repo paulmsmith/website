@@ -39,7 +39,8 @@ html {
 
 body {
   @include font-size(24px);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   color: rgb(40, 40, 40);
 }
 
@@ -68,20 +69,24 @@ body {
   @include font-size(1.5rem);
   font-family: 'font-b';
   overflow: hidden;
-  &:before, &:after {
+  &:before,
+  &:after {
     border-top: 2px solid #000;
     content: '';
     display: table-cell;
     position: relative;
     top: 0.5em;
-    width: 40%;;
+    width: 40%;
   }
-  &:before { right: 5%; }
-  &:after { left: 5%; }
+  &:before {
+    right: 5%;
+  }
+  &:after {
+    left: 5%;
+  }
 }
 
 .prose {
-
   h1,
   h2,
   h3,
@@ -110,7 +115,8 @@ body {
     @include font-size(23px);
   }
 
-  p, li {
+  p,
+  ul:not([class]) li {
     @extend %bodycopy;
     line-height: 1.375;
   }
@@ -133,7 +139,7 @@ body {
   }
 
   /* Let SVG scale without boundaries */
-  img[src$=".svg"] {
+  img[src$='.svg'] {
     width: 100%;
     height: auto;
     max-width: none;
@@ -141,12 +147,12 @@ body {
 
   hr {
     @extend %l-divider;
-    background: transparent url(/assets/images/diamond_divider.svg) no-repeat 50% 50%;
+    background: transparent url(/assets/images/diamond_divider.svg) no-repeat
+      50% 50%;
     height: 10px;
     @include margin-top(2.25em);
     @include margin-bottom(2.75em);
   }
-
 }
 
 .c-page-heading {

@@ -6,6 +6,7 @@
 }
 
 .c-tlds-item {
+  @include margin(1em 0 2em);
   &__content {
     margin: 0;
   }
@@ -13,6 +14,9 @@
   &__subtitle {
     font-family: 'font-a';
     margin: 0;
+  }
+  &__image {
+    display: none;
   }
 }
 
@@ -29,7 +33,7 @@
     }
     &__title {
       flex-grow: 1;
-      width: 25%;
+      width: 30%;
     }
     &__title,
     &__subtitle {
@@ -38,17 +42,23 @@
     &__title {
       @include font-size(1.6rem);
     }
+    &__image {
+      display: block;
+      @include margin(0 0 1rem 0);
+      img {
+        max-width: 55%;
+      }
+    }
   }
   .date-span {
+    @include font-size(1em);
+    @include margin(0 0 1em 0);
     > span {
       margin: 0;
     }
     &__divide {
       font-size: 0.8em;
       color: #666;
-    }
-    &__from {
-      // display: block;
     }
   }
 }

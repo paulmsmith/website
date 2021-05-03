@@ -48,13 +48,13 @@
       <ul class="c-post-navigation">
         {%- if previousPost and (previousPost.data.layout == currentLayout) %}
           <li class="c-post-navigation__item c-post-navigation__item--prev">
-            <div class="c-post-navigation__item__label">Previous: </div>
+            <div class="c-post-navigation__item__label"><span aria-hidden="true">← </span>Previous </div>
             <a href="{{ previousPost.url | url }}">{{ previousPost.data.title | safe }}</a>
           </li>
         {% endif %}
         {%- if nextPost and (nextPost.data.layout == currentLayout) %}
           <li class="c-post-navigation__item c-post-navigation__item--next">
-            <div class="c-post-navigation__item__label">Next: </div>
+            <div class="c-post-navigation__item__label">Next<span aria-hidden="true"> →</span></div>
             <a href="{{ nextPost.url | url }}">{{ nextPost.data.title | safe }}</a>
           </li>
         {% endif %}

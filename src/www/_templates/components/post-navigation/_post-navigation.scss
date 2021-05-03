@@ -10,26 +10,31 @@
     &__item {
       margin: 0;
       &--prev {
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: right;
         }
-        [dir="ltr"] & {
+        [dir='ltr'] & {
           text-align: left;
         }
       }
       &--next {
-        [dir="ltr"] & {
+        [dir='ltr'] & {
           text-align: right;
         }
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           text-align: left;
         }
+      }
+      &__label {
+        margin-bottom: 0.25em;
       }
     }
   }
 }
 
-.c-post-navigation .c-post-navigation__item:nth-last-child(-n+1):first-child,
-.c-post-navigation .c-post-navigation__item:nth-last-child(-n+1):first-child ~ .c-post-navigation__item {
+.c-post-navigation .c-post-navigation__item:nth-last-child(-n + 1):first-child,
+.c-post-navigation
+  .c-post-navigation__item:nth-last-child(-n + 1):first-child
+  ~ .c-post-navigation__item {
   width: 100%;
 }
