@@ -4,20 +4,20 @@ $theme-local: (
       'default': #f00
     ),
     'blue': (
-      'default': #1547FB,
+      'default': #1547fb
     ),
     'black': (
       'default': #000
     ),
     'page': (
       // 'background': #feffea,
-      'background': #fff,
+        'background': #fff,
       'border': #000,
       'focus': #ffdd2a
     ),
-    'anchor' : (
+    'anchor': (
       'default': (
-        'link': #1547FB
+        'link': inherit
       )
     )
   )
