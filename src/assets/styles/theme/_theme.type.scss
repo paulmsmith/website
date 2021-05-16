@@ -1,15 +1,20 @@
 .prose--weeknote {
   ul {
     padding: 0 1em;
-    list-style-type: "– ";
+    list-style-type: '– ';
   }
   li {
     ul {
-      list-style-type: "- ";
+      list-style-type: '- ';
+      @include margin-bottom(1.5em);
     }
     li {
-      @include margin(.5em 0);
-      @include font-size(.925em);
+      @include margin(0.5em 0);
+      @include font-size(0.925em);
+    }
+    @include margin-bottom(2em);
+    p {
+      @include margin(0.75em 0);
     }
   }
   h2 {
