@@ -44,7 +44,6 @@ changeFreq: 'weekly'
       {%- for item in collections.weeknote -%}
         <li class="list__item">
           <time>{{ item.date | readableDate }}</time>
-          {{ item.data | debug | console | safe }}
           <a href="{{ item.url }}">Episode {{ item.data.weeknote.episode | safe }}</a>
         </li>
       {%- endfor -%}
