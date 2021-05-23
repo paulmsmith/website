@@ -70,3 +70,29 @@
     }
   }
 }
+
+.list--tld {
+  list-style-type: none;
+  padding: 0;
+  .list__item {
+    @include font-size(1.35rem);
+    @include padding-bottom(1.5rem);
+    &:not(:last-child) {
+      @include margin-bottom(1.5rem);
+    }
+    border-bottom: 1px solid #dfdfdf;
+    time {
+      @include font-size(0.8em);
+      color: #666;
+      display: block;
+      @include margin-bottom(0.25em);
+    }
+    &__copy {
+      @include margin(1em 0);
+      font-family: 'font-b';
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -6,7 +6,6 @@
 
 @include mq($until: large) {
   .c-header {
-
     &__wrap {
       display: flex;
       flex-wrap: wrap;
@@ -51,49 +50,44 @@
       border-width: 5px 0 1rem 0;
       border-image: url(/assets/images/double_border.svg);
       border-image-slice: 28%;
-      padding: .15rem 0 .15rem;
+      padding: 0.15rem 0 0.15rem;
     }
 
     &__strap {
       display: none;
     }
-
   }
 
   .c-navigation {
-
   }
 }
 
 @include mq($from: large) {
-
   .c-header {
-
     &__wrap {
       border-bottom: 2px solid #000;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
       align-items: center;
-      justify-content:space-between;
+      justify-content: space-between;
       position: relative;
     }
 
     &__title {
       -moz-osx-font-smoothing: grayscale;
       font-family: 'font-b';
-      @include rfs(0 0 .15rem 0, margin);
+      @include rfs(0 0 0.15rem 0, margin);
       @include rfs(0 0 0 0, padding);
       line-height: 1;
       font-style: italic;
       font-weight: 400;
       @include font-size(3.75rem);
       @include rfs(-0.0595em, letter-spacing);
-      @include mq($from: large) {
-        @include font-size(3rem);
-        width: auto;
-        flex: 0 1 auto;
-      }
+      @include font-size(3rem);
+      width: auto;
+      flex: 0 1 auto;
+      min-width: 33%;
     }
 
     &__masthead {
@@ -103,9 +97,10 @@
       img {
         width: 100%;
         display: block;
-        max-width: 140px;
+        max-width: 120px;
         height: auto;
         margin: 0 auto;
+        transform: translateX(10%);
       }
       @include mq($from: large) {
         margin: 0;
@@ -119,18 +114,15 @@
       padding: 0;
       @include font-size(1.45rem);
       justify-content: flex-end;
-      @include mq($from: medium) {
-        order: 3;
-      }
+      order: 3;
+      min-width: 33%;
     }
 
     &__link {
       color: inherit;
       text-decoration: none;
     }
-
   }
-
 }
 
 .c-header__strap {
@@ -139,7 +131,7 @@
   border-width: 0 0 1rem 0;
   border-image: url(/assets/images/double_border.svg);
   border-image-slice: 28%;
-  padding: 1rem 0 .75rem;
+  padding: 1rem 0 0.75rem;
   margin: 0;
   &-item {
     margin: 0;
@@ -158,11 +150,13 @@
       p {
         font-size: 1em;
         line-height: 1;
+        min-width: 40%;
       }
       &:nth-child(2) {
         text-align: center;
         font-size: 1.2rem;
         flex-grow: 2;
+        min-width: auto;
       }
       &:last-child {
         text-align: right;
@@ -171,7 +165,7 @@
   }
   p {
     margin: 0;
-    font-family: "font-b";
+    font-family: 'font-b';
     @include font-size(1.15rem);
   }
 }

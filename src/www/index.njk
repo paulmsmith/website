@@ -15,6 +15,30 @@ changeFreq: 'weekly'
   </div>
 
   <div class="o-layout o-layout--huge u-!-margin-bottom-1">
+
+    <div class="o-layout__item u-1/2@medium">
+
+      <div class="prose">
+        <h2 class="u-!-margin-top-1">Weeknotes</h2>
+      </div>
+      <!-- /.prose -->
+
+      <ul class="list list--tld">
+      {%- for item in collections.weeknote -%}
+        <li class="list__item">
+          <p class="list__item__title">
+            <time>{{ item.date | readableDate }}</time>
+            <a href="{{ item.url }}">Episode {{ item.data.weeknote.episode | safe }}</a>
+          </p>
+          <p class="list__item__copy">
+            {{ item.data.social_description | safe }}
+          </p>
+        </li>
+      {%- endfor -%}
+      </ul>
+
+    </div>
+
     <div class="o-layout__item u-1/2@medium">
 
       <div class="prose">
@@ -22,7 +46,7 @@ changeFreq: 'weekly'
       </div>
       <!-- /.prose -->
 
-      <ul class="list list--entries">
+      <ul class="list list--tld">
       {%- for item in collections.post -%}
         <li class="list__item">
           <time>{{ item.date | readableDate }}</time>
@@ -33,23 +57,6 @@ changeFreq: 'weekly'
 
     </div>
 
-    <div class="o-layout__item u-1/2@medium">
-
-      <div class="prose">
-        <h2 class="u-!-margin-top-1">Weeknotes</h2>
-      </div>
-      <!-- /.prose -->
-
-      <ul class="list list--entries">
-      {%- for item in collections.weeknote -%}
-        <li class="list__item">
-          <time>{{ item.date | readableDate }}</time>
-          <a href="{{ item.url }}">Episode {{ item.data.weeknote.episode | safe }}</a>
-        </li>
-      {%- endfor -%}
-      </ul>
-
-    </div>
   </div>
 
 {% endblock %}
