@@ -120,6 +120,7 @@ body {
   }
 
   p,
+  ol:not([class]) li,
   ul:not([class]) li {
     @extend %bodycopy;
     line-height: 1.375;
