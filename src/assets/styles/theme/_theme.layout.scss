@@ -47,13 +47,23 @@ body {
   &--border {
     border: 2px solid #000;
   }
-  &--left {
-    float: left;
-    @include margin(0 1.25em 1.25em 0);
+  @include mq($until: medium) {
+    &--right,
+    &--left {
+      width: 100% !important;
+      @include margin(0);
+      display: block;
+    }
   }
-  &--right {
-    float: right;
-    @include margin(0 0 1.25em 1.25em);
+  @include mq($from: medium) {
+    &--left {
+      float: left;
+      @include margin(0 1.25em 1.25em 0);
+    }
+    &--right {
+      float: right;
+      @include margin(0 0 1.25em 1.25em);
+    }
   }
 }
 
