@@ -1,0 +1,25 @@
+.c-table-of-contents {
+  @include margin(0 0 2em 0);
+  @include padding(1.5em 0);
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  ul {
+    margin: 0;
+    padding: 0 0 0 0.5em;
+  }
+  li {
+    @include margin(0);
+    @include padding(0 0 0 0.65em);
+    list-style-type: '-';
+    &:not(:last-of-type) {
+      @include margin-bottom(0.25em);
+    }
+  }
+  &__header {
+    font-weight: bold;
+    font-family: 'font-b';
+    @include font-size(1.5rem);
+    @include margin(0 0 1em);
+    line-height: 1;
+  }
+}

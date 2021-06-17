@@ -96,3 +96,50 @@
     }
   }
 }
+
+.list--step-by-step {
+  list-style: none;
+  counter-reset: sbs-counter;
+  @include margin(2em 0);
+  padding: 0;
+  li {
+    counter-increment: sbs-counter;
+    @include font-size(1em);
+    @include margin(0);
+    @include padding(0 0 2em 3em);
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    p {
+      @include margin(0 0 1em 0);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0.25em;
+      left: (2.5em/3);
+      width: 3px;
+      height: calc(100%);
+      background: #000;
+      display: block;
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      content: '0' counter(sbs-counter);
+      font-weight: bold;
+      @include font-size(1em);
+      @include margin-right(0.5rem);
+      line-height: 1;
+      background: #000;
+      color: white;
+      padding: 0.35em 0.35em;
+      z-index: 100;
+    }
+  }
+}

@@ -5,6 +5,9 @@ tags: ['agile','medium']
 original_url: 'https://medium.com/@paulmsmith/agile-walls-9313e49cbeac'
 ---
 
+{% markdown %}
+[[toc]]
+
 I have been working within agile delivery teams for quite a few years now and have often been nominated, asked or took it upon myself to help my teams establish their ‘physical wall-space’.
 
 The following are some thoughts about why Agile Walls can be really valuable and hopefully some inspiration for when you create your own.
@@ -70,3 +73,5 @@ As Alan Cooper says, throwaway drawings, discussions and notations are what whit
 - [The role of the Agile Wall](https://gds.blog.gov.uk/2012/12/19/the-agile-wall/) by Emily Webber
 - [The Anatomy of our Kanban board](https://medium.com/@eleanor.mollett/the-anatomy-of-our-kanban-board-93f694b603e0) by Eleanor Mollett
 - [Know whiteboards, Know Design](https://medium.com/@MrAlanCooper/know-whiteboards-know-design-eb3a362df684) by Alan Cooper
+
+{% endmarkdown %}
