@@ -54,7 +54,9 @@
     "nunjucks-markdown": "^2.0.1",
     "require-dir": "^1.2.0",
     "rfs": "^9.0.3",
-    "sass-mq": "^5.0.1"
+    "sass-mq": "^5.0.1",
+    "markdown-it-anchor": "^7.1.0",
+    "markdown-it-table-of-contents": "^0.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

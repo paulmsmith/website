@@ -6,6 +6,8 @@ const markdownIt = require('markdown-it')({
   linkify: false,
   typographer: true
 });
+const markdownItAnchor = require('markdown-it-anchor');
+const markdownItTOC = require('markdown-it-table-of-contents');
 const pluginCloudinaryImage = require('eleventy-plugin-cloudinary');
 const htmlMinTransform = require('./transforms/html-min-transform.js');
 const nunjucksEnv = require('./nunjucks.environment');
@@ -79,6 +81,12 @@ module.exports = eleventyConfig => {
 
   // adds {% markdown %}{% endmarkdown %} shortcode
   eleventyConfig.addPairedShortcode('markdown', (content, inline = null) => {
+    markdownIt.use(markdownItAnchor);
+    markdownIt.use(markdownItTOC, {
+      containerClass: 'c-table-of-contents',
+      containerHeaderHtml: `<div class="c-table-of-contents__header">Contents</div>`
+    });
+
     return inline
       ? markdownIt.renderInline(content)
       : markdownIt.render(content);
