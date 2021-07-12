@@ -102,7 +102,7 @@ Now, more research, design, ideation and creativity comes in. Now you do the wor
 
 The needs you have identified and written down are the foundation of what you need to achieve.
 
-### Adding metrics
+### Adding measures
 
 It is important to understand what it looks like when you have successfully met the needs people have with your service.
 
