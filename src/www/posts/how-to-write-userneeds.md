@@ -178,14 +178,16 @@ So I am sharing a [User needs capture sheet](https://docs.google.com/spreadsheet
 
 It is made up of columns which will form a user need statement. It also has columns for classifying the type of need it is.
 
-The metrics (it's done when the user knows or can..) have some columns for narrative and finally there are some columns for noting where the need was seen, to help people remember the research or data that it was prompted by.
+The measures (it's done when the user knows or can..) have some columns for narrative and finally there are some columns for noting where the need was seen, to help people remember the research or data that it was prompted by.
+
+- [Google Sheets version](https://docs.google.com/spreadsheets/d/1aKl_cMEoM_wle4ggU9Ilb3tHhtsRB3r-nC8imk00PaA/edit?usp=sharing)
+- [Microsoft Excel version](/assets/files/user-needs-capture-sheet.xlsx)
+
+To update the dropdown lists, you can edit the 'data' sheet. For example if you want to change the list of users to choose from. Edit the cells in column a 'users'.
 
 There are lots of ways to capture research and document user needs, this just happens to one I like best. I find it easier to get my head around needs written and organised like this but whatever works for you and your team is fine.
 
 I've seen [Trello](https://trello.com) boards which roughly follow this structure, each card is a need in a column and that allows comments on each need and the ability to attach links and documents.
-
-- [Google Sheets version](https://docs.google.com/spreadsheets/d/1aKl_cMEoM_wle4ggU9Ilb3tHhtsRB3r-nC8imk00PaA/edit?usp=sharing)
-- [Microsoft Excel version](/assets/files/user-needs-capture-sheet.xlsx)
 
 ---
 
