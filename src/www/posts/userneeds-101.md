@@ -40,7 +40,7 @@ I encourage you to read them all (and in the order provided) to help you  unders
     <p>This is important because as Ben says, user research should be used to understand real life stages and context, not only the needs that IT projects or existing products create.</p>
   </li>
   <li>
-    <p>Armed with an understanding of the different types of user need, read Pete Gale's post: <a href="https://www.hollidazed.co.uk/2017/07/14/leading-service-design-user-needs/">How we talk about user needs</a>.</p>
+    <p>Armed with an understanding of the different types of user need, read Pete Gale's post: <a href="https://identityassurance.blog.gov.uk/2015/07/24/gov-uk-verify-how-we-talk-about-user-needs/">How we talk about user needs</a>.</p>
     <p>Acknowledging the origin of a particular need can help you to keep in mind what your users are really trying to do and what is the result of service design itself.</p>
   </li>
   <li>
