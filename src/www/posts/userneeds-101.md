@@ -146,7 +146,7 @@ These are what will help your team decide what possible solutions will best sati
   <li>help people to know what a visa is, when they need to obtain one and how to obtain one for their destination</li>
 </ul>
 
-Hopefully it is then easy to see how these design questions should be the starting point for user research and for designer to then try multiple different theories about how best to answer the question (solve the problem).
+Hopefully it is then easy to see how these design questions should be the starting point for user research and for the team to then try multiple different theories about how best to answer the question (solve the problem).
 
 ### Examples of user needs and their metrics
 
