@@ -40,6 +40,13 @@ function handleFonts() {
     .pipe(gulpIf(config.isDev, browserSync.stream()));
 }
 
+function handleFiles() {
+  return gulp
+    .src(`${config.paths.files.src}**/*.*`)
+    .pipe(gulp.dest(config.paths.files.dest))
+    .pipe(gulpIf(config.isDev, browserSync.stream()));
+}
+
 /**
  * handle images dependant on environment
  */
@@ -170,6 +177,10 @@ function watch() {
       tasks: ['optimise:images']
     },
     {
+      glob: config.paths.files.src.map(element => `${element}/**/*`),
+      tasks: ['move:files']
+    },
+    {
       glob: `${config.paths.scripts.src}**/*`,
       tasks: ['compile:scripts']
     }
@@ -201,6 +212,7 @@ function serve() {
 gulp.task('clean', clean);
 gulp.task('optimise:fonts', handleFonts);
 gulp.task('optimise:images', handleImages);
+gulp.task('move:files', handleFiles);
 
 gulp.task('compile:scripts', done => {
   generateScripts({
@@ -219,6 +231,7 @@ gulp.task('compile:content', gulp.series('build:templates'));
 gulp.task(
   'compile:assets',
   gulp.parallel(
+    'move:files',
     'compile:stylesheets',
     'optimise:images',
     'optimise:fonts',

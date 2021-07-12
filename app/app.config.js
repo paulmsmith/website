@@ -45,6 +45,10 @@ const config = {
       dest: `${assetsDistDir}/scripts/`,
       outputFile: `scripts.js`
     },
+    files: {
+      src: [`${assetsDir}/files`],
+      dest: `${assetsDistDir}`
+    },
     stylesheets: {
       src: [`${assetsDir}/styles`, `${templatesDir}/_templates/components`],
       dest: `${assetsDistDir}/styles/`

@@ -143,3 +143,22 @@
     }
   }
 }
+
+.c-poster-list {
+  background: #1d70b8;
+  @include padding(2em);
+  @include padding-left(2.5em);
+  color: #fff;
+  @include font-size(1.55rem);
+  @include margin(1.75rem auto);
+  font-weight: normal;
+  @include mq($from: medium) {
+    max-width: 60%;
+  }
+  li {
+    @include margin(0 0 1.25em);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
