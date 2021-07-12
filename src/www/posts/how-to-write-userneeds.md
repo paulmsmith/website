@@ -183,7 +183,7 @@ The measures (it's done when the user knows or can..) have some columns for narr
 - [Google Sheets version](https://docs.google.com/spreadsheets/d/1aKl_cMEoM_wle4ggU9Ilb3tHhtsRB3r-nC8imk00PaA/edit?usp=sharing)
 - [Microsoft Excel version](/assets/files/user-needs-capture-sheet.xlsx)
 
-To update the dropdown lists, you can edit the 'data' sheet. For example if you want to change the list of users to choose from. Edit the cells in column a 'users'.
+To update the dropdown lists, you can edit the 'data' sheet. For example if you want to change the list of users to choose from. Edit the cells in column 'A'.
 
 There are lots of ways to capture research and document user needs, this just happens to one I like best. I find it easier to get my head around needs written and organised like this but whatever works for you and your team is fine.
 
