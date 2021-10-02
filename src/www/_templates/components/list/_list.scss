@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .list {
   > li {
     @include margin(0 0 0.25em 0);
@@ -121,7 +123,7 @@
       content: '';
       position: absolute;
       top: 0.25em;
-      left: (2.5em/3);
+      left: math.div(2.5em, 3);
       width: 3px;
       height: calc(100%);
       background: #000;
