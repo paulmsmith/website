@@ -1,0 +1,36 @@
+---
+permalink: "{{ page.filePathStem }}.yml"
+---
+# Docs: https://www.netlifycms.org/docs/configuration-options/
+backend:
+  name: github
+  branch: master
+  repo: paulmsmith/website # cms repo
+  base_url: https://ps-cms-oauth-service.herokuapp.com # OAuth server
+# when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
+local_backend: {{ "true" if currentEnv == "dev" else "false" }}
+# logo_url: /assets/images/dl-logo.svg
+public_folder: /assets/images/uploads
+media_folder: src/assets/images/uploads
+display_url: https://paulsmith.site
+site_url: {{ "http://localhost:3000" if currentEnv == "dev" else "https://paulsmith.site" }}
+collections:
+  - name: "weeknotes"
+    label: "Weeknotes"
+    label_singular: "Weeknote"
+    folder: "src/www/weeknotes"
+    create: true
+    slug: {% raw %}"s{{weeknote.season}}e{{weeknote.episode}}"{% endraw %}
+    preview_path: {% raw %}"weeknotes/{{slug}}/"{% endraw %}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY"}
+      - label: "Issue"
+        name: "weeknote"
+        widget: "object"
+        collapsed: false
+        fields:
+          - {label: "Season", name: "season", widget: "string"}
+          - {label: "Episode", name: "episode", widget: "string"}
+      - { label: "Social description", name: "social_description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

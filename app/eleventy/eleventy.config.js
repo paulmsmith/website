@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const util = require('util');
 const { stringify } = require('javascript-stringify');
@@ -111,6 +112,11 @@ module.exports = eleventyConfig => {
       './src/www/{posts,weeknotes}/*.md'
     ]);
   });
+
+  // Enable data deep merge
+  eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.addPassthroughCopy('./src/www/admin/**/*.!(njk)'); // exclude nunjucks templates
 
   return {
     dir: {

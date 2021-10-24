@@ -1,0 +1,28 @@
+---
+title: "Weeknotes"
+hide_blogroll: true
+changeFreq: 'weekly'
+permalink: '/weeknotes/index.html'
+---
+{% extends "./_templates/layouts/blog.njk" %}
+{% block primarycontent %}
+  <ul class="list list--tld">
+  {%- for item in collections.weeknote -%}
+    <li class="list__item">
+      <p class="list__item__title">
+        <time>{{ item.date | readableDate }}</time>
+        <a href="{{ item.url }}">S{{ item.data.weeknote.season | padStart | safe }} Episode {{ item.data.weeknote.episode | padStart | safe }}</a>
+      </p>
+      <p class="list__item__copy">
+        {{ item.data.social_description | safe }}
+      </p>
+    </li>
+  {%- endfor -%}
+  </ul>
+{% endblock %}
+
+{% block secondarycontent %}
+  <div class="c-aside c-aside--dashed-concaved">
+    <p>This website is still under development.</p>
+  </div>
+{% endblock %}

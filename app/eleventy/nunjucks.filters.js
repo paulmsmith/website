@@ -110,7 +110,9 @@ module.exports = function nunjucksFilters(nunj) {
   };
 
   filters.dateToFormat = function dateToFormat(date, format) {
-    return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(String(format));
+    return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
+      String(format || 'dd LLL yyyy')
+    );
   };
 
   filters.dateToISO = function dateToISO(date, format) {
@@ -119,6 +121,10 @@ module.exports = function nunjucksFilters(nunj) {
       suppressMilliseconds: true,
       format: format || 'basic'
     });
+  };
+
+  filters.dateFromISO = function dateFromISO(dateString, dateFormat) {
+    return DateTime.fromISO(dateString).toFormat(dateFormat || 'dd LLL yyyy');
   };
 
   filters.readableDate = function readableDate(dateObj, dateFormat) {

@@ -19,41 +19,55 @@ changeFreq: 'weekly'
     <div class="o-layout__item u-1/2@medium">
 
       <div class="prose">
-        <h2 class="u-!-margin-top-1">Weeknotes</h2>
+        <h2 class="u-!-margin-top-1"><a href="/weeknotes/">Weeknotes</a></h2>
+        <p>The five most recent weeknotes</p>
       </div>
       <!-- /.prose -->
 
       <ul class="list list--tld">
       {%- for item in collections.weeknote -%}
+        {% if (loop.index <= 3) %}
         <li class="list__item">
           <p class="list__item__title">
             <time>{{ item.date | readableDate }}</time>
-            <a href="{{ item.url }}">Episode {{ item.data.weeknote.episode | safe }}</a>
+            <a href="{{ item.url }}">S{{ item.data.weeknote.season | padStart | safe }} Episode {{ item.data.weeknote.episode | padStart | safe }}</a>
           </p>
           <p class="list__item__copy">
             {{ item.data.social_description | safe }}
           </p>
         </li>
+        {% endif %}
       {%- endfor -%}
       </ul>
+
+      <div class="prose">
+        <p><a href="/weeknotes/">View all weeknotes</a>.</p>
+      </div>
 
     </div>
 
     <div class="o-layout__item u-1/2@medium">
 
       <div class="prose">
-        <h2 class="u-!-margin-top-1">Writing</h2>
+        <h2 class="u-!-margin-top-1"><a href="/writing/">Writing</a></h2>
+        <p>The five most recent articles</p>
       </div>
       <!-- /.prose -->
 
       <ul class="list list--tld">
       {%- for item in collections.post -%}
+        {% if (loop.index <= 5) %}
         <li class="list__item">
           <time>{{ item.date | readableDate }}</time>
           <a href="{{ item.url }}">{{ item.data.title }}</a>
         </li>
+        {% endif %}
       {%- endfor -%}
       </ul>
+
+      <div class="prose">
+        <p><a href="/weeknotes/">View all writing</a>.</p>
+      </div>
 
     </div>
 
