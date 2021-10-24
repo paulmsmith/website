@@ -1,11 +1,12 @@
-
 {% set heading = (date | readableDate | safe) %}
 {% set title = heading + ' - Weeknotes by Paul Smith' %}
 {% set currentLayout = 'weeknote' %}
+{% set currentPost = collections.weeknote | getCollectionItem(page) %}
+{%- set previousPost = collections.weeknote | getNextCollectionItem(page) %}
+{%- set nextPost = collections.weeknote | getPreviousCollectionItem(page) %}
 {% extends "./post.njk" %}
 
 {% block sectionhead %}
-{{ date | dateToISO | console | safe }}
 <div class="c-sectionhead c-sectionhead--weeknote">
   <h1 class="c-sectionhead__heading-1">
     <div class="c-sectionhead__strapline">

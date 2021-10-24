@@ -1,8 +1,10 @@
 {% extends "./blog.njk" %}
 
-{% set currentPost = collections.writings | getCollectionItem(page) %}
-{%- set nextPost = collections.writings | getNextCollectionItem(page) %}
-{%- set previousPost = collections.writings | getPreviousCollectionItem(page) %}
+{% if not currentLayout %}
+  {% set currentPost = collections.post | getCollectionItem(page) %}
+  {%- set previousPost = collections.post | getNextCollectionItem(page) %}
+  {%- set nextPost = collections.post | getPreviousCollectionItem(page) %}
+{% endif %}
 {# if currentLayout not set higher up in the layout chain #}
 {% if not currentLayout %}{% set currentLayout = 'post' %}{% endif %}
 
@@ -46,13 +48,13 @@
 
     {% if nextPost or previousPost %}
       <ul class="c-post-navigation">
-        {%- if previousPost and (previousPost.data.layout == currentLayout) %}
+        {%- if previousPost %}
           <li class="c-post-navigation__item c-post-navigation__item--prev">
             <div class="c-post-navigation__item__label"><span aria-hidden="true">← </span>Previous </div>
             <a href="{{ previousPost.url | url }}">{{ previousPost.data.title | safe }}</a>
           </li>
         {% endif %}
-        {%- if nextPost and (nextPost.data.layout == currentLayout) %}
+        {%- if nextPost %}
           <li class="c-post-navigation__item c-post-navigation__item--next">
             <div class="c-post-navigation__item__label">Next<span aria-hidden="true"> →</span></div>
             <a href="{{ nextPost.url | url }}">{{ nextPost.data.title | safe }}</a>

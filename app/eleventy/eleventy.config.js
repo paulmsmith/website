@@ -108,9 +108,9 @@ module.exports = eleventyConfig => {
     collectionApi
   ) {
     // Also accepts an array of globs!
-    return collectionApi.getFilteredByGlob([
-      './src/www/{posts,weeknotes}/*.md'
-    ]);
+    return collectionApi
+      .getFilteredByGlob(['./src/www/weeknotes/*.md', './src/www/posts/*.md'])
+      .reverse();
   });
 
   // Enable data deep merge
